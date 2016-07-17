@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.621 ns
+From           : SET[1]
+To             : H1[3]~reg0_emulated
+From Clock     : --
+To Clock       : clk_1
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 33.931 ns
+From           : SET_LAST[1]
+To             : M1[3]
+From Clock     : START
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 38.035 ns
+From           : SET[1]
+To             : M1[3]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.260 ns
+From           : DOWN
+To             : DOWN_LAST
+From Clock     : --
+To Clock       : START
+Failed Paths   : 0
+
+Type           : Clock Setup: 'START'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.86 MHz ( period = 28.687 ns )
+From           : SET_LAST[1]
+To             : M1[3]~reg0latch
+From Clock     : START
+To Clock       : START
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_1'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 35.67 MHz ( period = 28.038 ns )
+From           : M2[0]~reg0_emulated
+To             : H1[3]~reg0_emulated
+From Clock     : clk_1
+To Clock       : clk_1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

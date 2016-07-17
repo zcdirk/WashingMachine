@@ -1,0 +1,134 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 264 192)
+	(text "KONGZHI" (rect 5 0 49 12)(font "Arial" ))
+	(text "inst" (rect 8 160 20 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "GC" (rect 0 0 14 12)(font "Arial" ))
+		(text "GC" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "SW" (rect 0 0 16 12)(font "Arial" ))
+		(text "SW" (rect 21 43 37 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "YY" (rect 0 0 14 12)(font "Arial" ))
+		(text "YY" (rect 21 59 35 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "MS" (rect 0 0 14 12)(font "Arial" ))
+		(text "MS" (rect 21 75 35 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "DY" (rect 0 0 14 12)(font "Arial" ))
+		(text "DY" (rect 21 91 35 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "QT" (rect 0 0 12 12)(font "Arial" ))
+		(text "QT" (rect 21 107 33 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "PROCESS_END" (rect 0 0 74 12)(font "Arial" ))
+		(text "PROCESS_END" (rect 21 123 95 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "clk_1" (rect 0 0 20 12)(font "Arial" ))
+		(text "clk_1" (rect 21 139 41 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 248 32)
+		(output)
+		(text "SET[1..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "SET[1..0]" (rect 190 27 227 39)(font "Arial" ))
+		(line (pt 248 32)(pt 232 32)(line_width 3))
+	)
+	(port
+		(pt 248 48)
+		(output)
+		(text "START" (rect 0 0 34 12)(font "Arial" ))
+		(text "START" (rect 193 43 227 55)(font "Arial" ))
+		(line (pt 248 48)(pt 232 48)(line_width 1))
+	)
+	(port
+		(pt 248 64)
+		(output)
+		(text "ZS_START" (rect 0 0 53 12)(font "Arial" ))
+		(text "ZS_START" (rect 174 59 227 71)(font "Arial" ))
+		(line (pt 248 64)(pt 232 64)(line_width 1))
+	)
+	(port
+		(pt 248 80)
+		(output)
+		(text "FS_START" (rect 0 0 51 12)(font "Arial" ))
+		(text "FS_START" (rect 176 75 227 87)(font "Arial" ))
+		(line (pt 248 80)(pt 232 80)(line_width 1))
+	)
+	(port
+		(pt 248 96)
+		(output)
+		(text "SW_MODE[1..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "SW_MODE[1..0]" (rect 157 91 227 103)(font "Arial" ))
+		(line (pt 248 96)(pt 232 96)(line_width 3))
+	)
+	(port
+		(pt 248 112)
+		(output)
+		(text "CONTROLL" (rect 0 0 54 12)(font "Arial" ))
+		(text "CONTROLL" (rect 173 107 227 119)(font "Arial" ))
+		(line (pt 248 112)(pt 232 112)(line_width 1))
+	)
+	(port
+		(pt 248 128)
+		(output)
+		(text "GC_MODE[1..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "GC_MODE[1..0]" (rect 159 123 227 135)(font "Arial" ))
+		(line (pt 248 128)(pt 232 128)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 232 160)(line_width 1))
+	)
+)

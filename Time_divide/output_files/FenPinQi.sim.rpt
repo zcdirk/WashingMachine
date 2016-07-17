@@ -1,0 +1,255 @@
+Simulator report for FenPinQi
+Wed Jan 07 08:54:24 2015
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 ns     ;
+; Simulation Netlist Size     ; 62 nodes     ;
+; Simulation Coverage         ;      40.32 % ;
+; Total Number of Transitions ; 308          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                              ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Option                                                                                     ; Setting                            ; Default Value ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                         ; Timing        ;
+; Start time                                                                                 ; 0 ns                               ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                               ;               ;
+; Vector input source                                                                        ; I:/MyProject/FenPinQi/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                 ; On            ;
+; Check outputs                                                                              ; Off                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                ; Off           ;
+; Detect glitches                                                                            ; Off                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                               ; Auto          ;
++--------------------------------------------------------------------------------------------+------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      40.32 % ;
+; Total nodes checked                                 ; 62           ;
+; Total output ports checked                          ; 62           ;
+; Total output ports with complete 1/0-value coverage ; 25           ;
+; Total output ports with no 1/0-value coverage       ; 32           ;
+; Total output ports with no 1-value coverage         ; 32           ;
+; Total output ports with no 0-value coverage         ; 37           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                        ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |FENPINQI|m1~0         ; |FENPINQI|m1~0         ; out              ;
+; |FENPINQI|m1~1         ; |FENPINQI|m1~1         ; out              ;
+; |FENPINQI|m1[1]        ; |FENPINQI|m1[1]        ; regout           ;
+; |FENPINQI|m1[0]        ; |FENPINQI|m1[0]        ; regout           ;
+; |FENPINQI|m2~0         ; |FENPINQI|m2~0         ; out              ;
+; |FENPINQI|m2~1         ; |FENPINQI|m2~1         ; out              ;
+; |FENPINQI|m2~2         ; |FENPINQI|m2~2         ; out              ;
+; |FENPINQI|clk_500~reg0 ; |FENPINQI|clk_500~reg0 ; regout           ;
+; |FENPINQI|m2[2]        ; |FENPINQI|m2[2]        ; regout           ;
+; |FENPINQI|m2[1]        ; |FENPINQI|m2[1]        ; regout           ;
+; |FENPINQI|m2[0]        ; |FENPINQI|m2[0]        ; regout           ;
+; |FENPINQI|m3~6         ; |FENPINQI|m3~6         ; out              ;
+; |FENPINQI|clk_100~reg0 ; |FENPINQI|clk_100~reg0 ; regout           ;
+; |FENPINQI|m3[0]        ; |FENPINQI|m3[0]        ; regout           ;
+; |FENPINQI|clear        ; |FENPINQI|clear        ; out              ;
+; |FENPINQI|clk          ; |FENPINQI|clk          ; out              ;
+; |FENPINQI|clk_100      ; |FENPINQI|clk_100      ; pin_out          ;
+; |FENPINQI|clk_500      ; |FENPINQI|clk_500      ; pin_out          ;
+; |FENPINQI|LessThan1~0  ; |FENPINQI|LessThan1~0  ; out0             ;
+; |FENPINQI|LessThan1~1  ; |FENPINQI|LessThan1~1  ; out0             ;
+; |FENPINQI|LessThan1~2  ; |FENPINQI|LessThan1~2  ; out0             ;
+; |FENPINQI|Add1~0       ; |FENPINQI|Add1~0       ; out0             ;
+; |FENPINQI|Add1~1       ; |FENPINQI|Add1~1       ; out0             ;
+; |FENPINQI|Add1~2       ; |FENPINQI|Add1~2       ; out0             ;
+; |FENPINQI|Equal0~0     ; |FENPINQI|Equal0~0     ; out0             ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------+
+; Missing 1-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |FENPINQI|clk_1~reg0  ; |FENPINQI|clk_1~reg0  ; regout           ;
+; |FENPINQI|m3~0        ; |FENPINQI|m3~0        ; out              ;
+; |FENPINQI|m3~1        ; |FENPINQI|m3~1        ; out              ;
+; |FENPINQI|m3~2        ; |FENPINQI|m3~2        ; out              ;
+; |FENPINQI|m3~3        ; |FENPINQI|m3~3        ; out              ;
+; |FENPINQI|m3~4        ; |FENPINQI|m3~4        ; out              ;
+; |FENPINQI|m3[6]       ; |FENPINQI|m3[6]       ; regout           ;
+; |FENPINQI|m3[5]       ; |FENPINQI|m3[5]       ; regout           ;
+; |FENPINQI|m3[4]       ; |FENPINQI|m3[4]       ; regout           ;
+; |FENPINQI|m3[3]       ; |FENPINQI|m3[3]       ; regout           ;
+; |FENPINQI|m3[2]       ; |FENPINQI|m3[2]       ; regout           ;
+; |FENPINQI|clk_1       ; |FENPINQI|clk_1       ; pin_out          ;
+; |FENPINQI|LessThan2~0 ; |FENPINQI|LessThan2~0 ; out0             ;
+; |FENPINQI|LessThan2~1 ; |FENPINQI|LessThan2~1 ; out0             ;
+; |FENPINQI|LessThan2~2 ; |FENPINQI|LessThan2~2 ; out0             ;
+; |FENPINQI|LessThan2~3 ; |FENPINQI|LessThan2~3 ; out0             ;
+; |FENPINQI|LessThan2~4 ; |FENPINQI|LessThan2~4 ; out0             ;
+; |FENPINQI|LessThan2~5 ; |FENPINQI|LessThan2~5 ; out0             ;
+; |FENPINQI|LessThan2~6 ; |FENPINQI|LessThan2~6 ; out0             ;
+; |FENPINQI|LessThan2~7 ; |FENPINQI|LessThan2~7 ; out0             ;
+; |FENPINQI|LessThan2~8 ; |FENPINQI|LessThan2~8 ; out0             ;
+; |FENPINQI|Add2~1      ; |FENPINQI|Add2~1      ; out0             ;
+; |FENPINQI|Add2~2      ; |FENPINQI|Add2~2      ; out0             ;
+; |FENPINQI|Add2~3      ; |FENPINQI|Add2~3      ; out0             ;
+; |FENPINQI|Add2~4      ; |FENPINQI|Add2~4      ; out0             ;
+; |FENPINQI|Add2~5      ; |FENPINQI|Add2~5      ; out0             ;
+; |FENPINQI|Add2~6      ; |FENPINQI|Add2~6      ; out0             ;
+; |FENPINQI|Add2~7      ; |FENPINQI|Add2~7      ; out0             ;
+; |FENPINQI|Add2~8      ; |FENPINQI|Add2~8      ; out0             ;
+; |FENPINQI|Add2~9      ; |FENPINQI|Add2~9      ; out0             ;
+; |FENPINQI|Add2~10     ; |FENPINQI|Add2~10     ; out0             ;
+; |FENPINQI|Equal2~0    ; |FENPINQI|Equal2~0    ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------+
+; Missing 0-Value Coverage                                         ;
++-----------------------+-----------------------+------------------+
+; Node Name             ; Output Port Name      ; Output Port Type ;
++-----------------------+-----------------------+------------------+
+; |FENPINQI|clk_1~reg0  ; |FENPINQI|clk_1~reg0  ; regout           ;
+; |FENPINQI|m3~0        ; |FENPINQI|m3~0        ; out              ;
+; |FENPINQI|m3~1        ; |FENPINQI|m3~1        ; out              ;
+; |FENPINQI|m3~2        ; |FENPINQI|m3~2        ; out              ;
+; |FENPINQI|m3~3        ; |FENPINQI|m3~3        ; out              ;
+; |FENPINQI|m3~4        ; |FENPINQI|m3~4        ; out              ;
+; |FENPINQI|m3~5        ; |FENPINQI|m3~5        ; out              ;
+; |FENPINQI|m3[6]       ; |FENPINQI|m3[6]       ; regout           ;
+; |FENPINQI|m3[5]       ; |FENPINQI|m3[5]       ; regout           ;
+; |FENPINQI|m3[4]       ; |FENPINQI|m3[4]       ; regout           ;
+; |FENPINQI|m3[3]       ; |FENPINQI|m3[3]       ; regout           ;
+; |FENPINQI|m3[2]       ; |FENPINQI|m3[2]       ; regout           ;
+; |FENPINQI|m3[1]       ; |FENPINQI|m3[1]       ; regout           ;
+; |FENPINQI|clk_1       ; |FENPINQI|clk_1       ; pin_out          ;
+; |FENPINQI|LessThan2~0 ; |FENPINQI|LessThan2~0 ; out0             ;
+; |FENPINQI|LessThan2~1 ; |FENPINQI|LessThan2~1 ; out0             ;
+; |FENPINQI|LessThan2~2 ; |FENPINQI|LessThan2~2 ; out0             ;
+; |FENPINQI|LessThan2~3 ; |FENPINQI|LessThan2~3 ; out0             ;
+; |FENPINQI|LessThan2~4 ; |FENPINQI|LessThan2~4 ; out0             ;
+; |FENPINQI|LessThan2~5 ; |FENPINQI|LessThan2~5 ; out0             ;
+; |FENPINQI|LessThan2~6 ; |FENPINQI|LessThan2~6 ; out0             ;
+; |FENPINQI|LessThan2~7 ; |FENPINQI|LessThan2~7 ; out0             ;
+; |FENPINQI|LessThan2~8 ; |FENPINQI|LessThan2~8 ; out0             ;
+; |FENPINQI|Add0~0      ; |FENPINQI|Add0~0      ; out0             ;
+; |FENPINQI|Add2~0      ; |FENPINQI|Add2~0      ; out0             ;
+; |FENPINQI|Add2~1      ; |FENPINQI|Add2~1      ; out0             ;
+; |FENPINQI|Add2~2      ; |FENPINQI|Add2~2      ; out0             ;
+; |FENPINQI|Add2~3      ; |FENPINQI|Add2~3      ; out0             ;
+; |FENPINQI|Add2~4      ; |FENPINQI|Add2~4      ; out0             ;
+; |FENPINQI|Add2~5      ; |FENPINQI|Add2~5      ; out0             ;
+; |FENPINQI|Add2~6      ; |FENPINQI|Add2~6      ; out0             ;
+; |FENPINQI|Add2~7      ; |FENPINQI|Add2~7      ; out0             ;
+; |FENPINQI|Add2~8      ; |FENPINQI|Add2~8      ; out0             ;
+; |FENPINQI|Add2~9      ; |FENPINQI|Add2~9      ; out0             ;
+; |FENPINQI|Add2~10     ; |FENPINQI|Add2~10     ; out0             ;
+; |FENPINQI|Equal1~0    ; |FENPINQI|Equal1~0    ; out0             ;
+; |FENPINQI|Equal2~0    ; |FENPINQI|Equal2~0    ; out0             ;
++-----------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Wed Jan 07 08:54:23 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off FenPinQi -c FenPinQi
+Info: Using vector source file "I:/MyProject/FenPinQi/Waveform.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      40.32 %
+Info: Number of transitions in simulation is 308
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 154 megabytes
+    Info: Processing ended: Wed Jan 07 08:54:24 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

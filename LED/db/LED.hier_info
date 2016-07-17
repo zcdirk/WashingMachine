@@ -1,0 +1,33 @@
+|LED
+GC_MODE[0] => Equal0.IN1
+GC_MODE[0] => Equal1.IN1
+GC_MODE[0] => Equal2.IN0
+GC_MODE[1] => Equal0.IN0
+GC_MODE[1] => Equal1.IN0
+GC_MODE[1] => Equal2.IN1
+SW_MODE[0] => Equal3.IN1
+SW_MODE[0] => Equal4.IN1
+SW_MODE[0] => Equal5.IN0
+SW_MODE[1] => Equal3.IN0
+SW_MODE[1] => Equal4.IN0
+SW_MODE[1] => Equal5.IN1
+SET[0] => Equal6.IN1
+SET[0] => Equal7.IN1
+SET[0] => Equal8.IN0
+SET[0] => Equal9.IN1
+SET[1] => Equal6.IN0
+SET[1] => Equal7.IN0
+SET[1] => Equal8.IN1
+SET[1] => Equal9.IN0
+GC_L[0] <= GC_L[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+GC_L[1] <= GC_L[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+GC_L[2] <= GC_L[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SW_L[0] <= SW_L[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SW_L[1] <= SW_L[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SW_L[2] <= SW_L[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+MS_L[0] <= MS_L[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+MS_L[1] <= MS_L[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+MS_L[2] <= MS_L[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+MS_L[3] <= MS_L[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

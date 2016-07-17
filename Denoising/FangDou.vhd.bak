@@ -1,0 +1,153 @@
+--按键防抖模块--
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY FangDou IS
+   PORT (clk_100,GC_IN,SW_IN,YY_IN,UP_IN,DOWN_IN,MS_IN,DY_IN,QT_IN,RST_IN: IN STD_LOGIC;   --防抖系统的输入与时钟信号(时钟信号为100Hz)--
+		   GC,SW,YY,UP,DOWN,MS,DY,QT,RST: OUT STD_LOGIC);                        --防抖系统的输出--
+END ENTITY;
+--分别对应过程、水位、预约、增加、减少、模式、电源、启停控制、复位按键--
+
+ARCHITECTURE F OF FangDou IS
+	SIGNAL TEMP1,TEMP2,TEMP3,TEMP4,TEMP5,TEMP6,TEMP7,TEMP8,TEMP9: INTEGER RANGE 0 TO 9;                 --用来计数--
+	SIGNAL DATA1,DATA2,DATA3,DATA4,DATA5,DATA6,DATA7,DATA8,DATA9: STD_LOGIC;                            --暂时存放输入数据--
+BEGIN
+
+--通过时钟延迟达到防抖效果，只有按键时间长于0.1s才会相应--
+--每一个进程对应一个按键，分别进行处理--
+P1:PROCESS(clk_100,GC_IN)             --过程按键--                              
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA1 /= GC_IN) THEN         --若发生变化--
+			TEMP1 <= TEMP1 + 1;          --将temp加1--
+		ELSE	TEMP1 <= 0;               --若是抖动或者无按键按下则把0赋给temp--
+		END IF;
+		IF TEMP1 = 9 THEN               --计数等于10时（0.1s）判断按键有效，将按键值赋给输出端--
+			DATA1 <= GC_IN;
+			TEMP1 <= 0;
+			GC <=DATA1;
+		END IF;
+	END IF;
+END PROCESS p1;
+
+P2:PROCESS(clk_100,SW_IN)             --水位按键--                    
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA2 /= SW_IN) THEN
+			TEMP2 <= TEMP2 + 1;
+		ELSE	TEMP2 <= 0;
+		END IF;
+		IF TEMP2 = 9 THEN
+			DATA2 <= SW_IN;
+			TEMP2 <= 0;
+			SW <=DATA2;
+		END IF;
+	END IF;
+END PROCESS p2;
+
+P3:PROCESS(clk_100,YY_IN)              --预约按键--                     
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA3 /= YY_IN) THEN
+			TEMP3 <= TEMP3 + 1;
+		ELSE	TEMP3 <= 0;
+		END IF;
+		IF TEMP3 = 9 THEN
+			DATA3 <= YY_IN;
+			TEMP3 <= 0;
+			YY <=DATA3;
+		END IF;
+	END IF;
+END PROCESS p3;
+
+P4:PROCESS(clk_100,UP_IN)              --增加按键--                      
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA4 /= UP_IN) THEN
+			TEMP4 <= TEMP4 + 1;
+		ELSE	TEMP4 <= 0;
+		END IF;
+		IF TEMP4 = 9 THEN
+			DATA4 <= UP_IN;
+			TEMP4 <= 0;
+			UP <=DATA4;
+		END IF;
+	END IF;
+END PROCESS p4;
+
+P5:PROCESS(clk_100,DOWN_IN)              --减少按键--                      
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA5 /= DOWN_IN) THEN
+			TEMP5 <= TEMP5 + 1;
+		ELSE	TEMP5 <= 0;
+		END IF;
+		IF TEMP5 = 9 THEN
+			DATA5 <= DOWN_IN;
+			TEMP5 <= 0;
+			DOWN <=DATA5;
+		END IF;
+	END IF;
+END PROCESS p5;
+
+P6:PROCESS(clk_100,MS_IN)                 --模式按键--                   
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA6 /= MS_IN) THEN
+			TEMP6 <= TEMP6 + 1;
+		ELSE	TEMP6 <= 0;
+		END IF;
+		IF TEMP6 = 9 THEN
+			DATA6 <= MS_IN;
+			TEMP6 <= 0;
+			MS <=DATA6;
+		END IF;
+	END IF;
+END PROCESS p6;
+
+P7:PROCESS(clk_100,DY_IN)                     --电源按键--               
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA7 /= DY_IN) THEN
+			TEMP7 <= TEMP7 + 1;
+		ELSE	TEMP7 <= 0;
+		END IF;
+		IF TEMP7 = 9 THEN
+			DATA7 <= DY_IN;
+			TEMP7 <= 0;
+			DY <=DATA7;
+		END IF;
+	END IF;
+END PROCESS p7;
+
+P8:PROCESS(clk_100,QT_IN)                       --启停按键--             
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA8 /= QT_IN) THEN
+			TEMP8 <= TEMP8 + 1;
+		ELSE	TEMP8 <= 0;
+		END IF;
+		IF TEMP8 = 9 THEN
+			DATA8 <= QT_IN;
+			TEMP8 <= 0;
+			QT <=DATA8;
+		END IF;
+	END IF;
+END PROCESS p8;
+
+P9:PROCESS(clk_100,RST_IN)                       --reset按键--             
+BEGIN
+	IF(clk_100'EVENT AND clk_100 = '0') THEN
+		IF(DATA9 /= RST_IN) THEN
+			TEMP9 <= TEMP9 + 1;
+		ELSE	TEMP9 <= 0;
+		END IF;
+		IF TEMP9 = 9 THEN
+			DATA9 <= RST_IN;
+			TEMP9 <= 0;
+			RST <=DATA9;
+		END IF;
+	END IF;
+END PROCESS p9;
+
+END ARCHITECTURE F;

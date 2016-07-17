@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Jan 07 08:50:14 2015
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : FenPinQi
+Top-level Entity Name : FENPINQI
+Family : Cyclone II
+Device : EP2C5T144C6
+Timing Models : Final
+Total logic elements : 22 / 4,608 ( < 1 % )
+    Total combinational functions : 21 / 4,608 ( < 1 % )
+    Dedicated logic registers : 15 / 4,608 ( < 1 % )
+Total registers : 15
+Total pins : 5 / 89 ( 6 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

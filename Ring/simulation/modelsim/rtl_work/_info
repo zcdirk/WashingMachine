@@ -1,0 +1,44 @@
+m255
+K3
+13
+cModel Technology
+Z0 dI:\MyProject\FengMingQi\simulation\modelsim
+Efengmingqi
+Z1 w1420185583
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z4 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z6 dI:\MyProject\FengMingQi\simulation\modelsim
+Z7 8I:/MyProject/FengMingQi/FengMingQi.vhd
+Z8 FI:/MyProject/FengMingQi/FengMingQi.vhd
+l0
+L6
+Vd>nZX8]FgFLTPQDE;;J7g1
+!s100 P@VDaT=bETl4fbWAz_Wjh3
+Z9 OV;C;10.1d;51
+31
+!i10b 1
+Z10 !s108 1420508003.934000
+Z11 !s90 -reportprogress|300|-93|-work|work|I:/MyProject/FengMingQi/FengMingQi.vhd|
+Z12 !s107 I:/MyProject/FengMingQi/FengMingQi.vhd|
+Z13 o-93 -work work -O0
+Z14 tExplicit 1
+Af
+R2
+R3
+R4
+R5
+DEx4 work 10 fengmingqi 0 22 d>nZX8]FgFLTPQDE;;J7g1
+l14
+L12
+VCGWQ[?j<RKH]YljBN=5jY2
+!s100 C[0HOi^15J[LKJQYGXGT=1
+R9
+31
+!i10b 1
+R10
+R11
+R12
+R13
+R14

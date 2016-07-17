@@ -1,0 +1,64 @@
+--时钟显示模块，时钟模块的时间用七段数码管显示--
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY SHIZHONGXIANSHI IS
+PORT(clk_500:IN STD_LOGIC;                   --500Hz用于扫描数码管
+     CLEAR:IN STD_LOGIC;                     --复位信号--
+	  H1,H2,M1,M2,S1,S2:IN INTEGER RANGE 0 TO 9; --时分秒的高位和低位--
+	  CHOOSE:OUT STD_LOGIC_VECTOR(5 DOWNTO 0);--用选择数码管--
+	  SHOW:OUT STD_LOGIC_VECTOR(6 DOWNTO 0)); --用来显示7段数码管--
+END ENTITY SHIZHONGXIANSHI;
+
+ARCHITECTURE S OF SHIZHONGXIANSHI IS
+SIGNAL COUNT: INTEGER RANGE 0 TO 5;          --用来顺次刷新6个数码管--
+SIGNAL TEMP: INTEGER RANGE 0 TO 9;           --用来传递每一位的数字信号--
+BEGIN
+p1:PROCESS(clk_500,CLEAR)                    --计数器计数进程--
+BEGIN
+     IF CLEAR='1' THEN COUNT<=0;
+	  ELSIF clk_500'EVENT AND clk_500='1'THEN
+	     IF(COUNT=5) THEN COUNT<=0;
+		  ELSE COUNT<=COUNT+1;
+		  END IF;
+	  END IF;
+END PROCESS p1;
+
+p2:PROCESS(COUNT,H1,H2,M1,M2,S1,S2)          --当count为0—5时分别将时分秒的高位和低位传至中间信号temp（数码管低电平有效，刷新频率为500/6Hz）
+BEGIN
+     CASE COUNT IS
+	  WHEN 0 => TEMP<=H1;
+	            CHOOSE<="011111";
+	  WHEN 1 => TEMP<=H2;
+	            CHOOSE<="101111";
+	  WHEN 2 => TEMP<=M1;
+	            CHOOSE<="110111";
+	  WHEN 3 => TEMP<=M2;
+	            CHOOSE<="111011";
+	  WHEN 4 => TEMP<=S1;
+	            CHOOSE<="111101";
+	  WHEN 5 => TEMP<=S2;
+	            CHOOSE<="111110";
+	  WHEN OTHERS => TEMP<=0;
+	                 CHOOSE<="000000";
+	  END CASE;
+END PROCESS p2;
+
+p3:PROCESS(TEMP)                             --将十进制数转化为7段数码管显示的数值--
+BEGIN  
+     CASE TEMP IS
+	  WHEN 0 => SHOW<="1111110";
+	  WHEN 1 => SHOW<="0110000";
+	  WHEN 2 => SHOW<="1101101";
+	  WHEN 3 => SHOW<="1111001";
+	  WHEN 4 => SHOW<="0110011";
+	  WHEN 5 => SHOW<="1011011";
+	  WHEN 6 => SHOW<="1011111";
+	  WHEN 7 => SHOW<="1110000";
+	  WHEN 8 => SHOW<="1111111";
+	  WHEN 9 => SHOW<="1111011";    
+	  END CASE;
+END PROCESS p3;
+
+END ARCHITECTURE S;

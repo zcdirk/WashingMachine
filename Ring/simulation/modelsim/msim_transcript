@@ -1,0 +1,47 @@
+# Reading D:/Program Files/altera/13/modelsim_ae/tcl/vsim/pref.tcl 
+# do FengMingQi_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\Program Files\altera\13\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\Program Files\altera\13\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {I:/MyProject/FengMingQi/FengMingQi.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity FENGMINGQI
+# -- Compiling architecture F of FENGMINGQI
+# 
+vsim work.fengmingqi(f)
+# vsim work.fengmingqi(f) 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.fengmingqi(f)
+wave create -pattern none -portmode in -language vhdl /fengmingqi/clk_1
+# fengmingqi
+wave create -pattern none -portmode in -language vhdl /fengmingqi/clk_500
+# fengmingqi
+wave create -pattern none -portmode in -language vhdl /fengmingqi/PROCESS_END
+# fengmingqi
+wave create -pattern none -portmode out -language vhdl /fengmingqi/FOUT
+# fengmingqi

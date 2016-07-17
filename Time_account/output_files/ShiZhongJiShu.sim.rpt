@@ -1,0 +1,1516 @@
+Simulator report for ShiZhongJiShu
+Wed Jan 07 09:36:51 2015
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 200.0 ns     ;
+; Simulation Netlist Size     ; 208 nodes    ;
+; Simulation Coverage         ;       4.74 % ;
+; Total Number of Transitions ; 11044        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5T144C6  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       4.74 % ;
+; Total nodes checked                                 ; 208          ;
+; Total output ports checked                          ; 211          ;
+; Total output ports with complete 1/0-value coverage ; 10           ;
+; Total output ports with no 1/0-value coverage       ; 143          ;
+; Total output ports with no 1-value coverage         ; 197          ;
+; Total output ports with no 0-value coverage         ; 147          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |SHIZHONGJISHU|p1~0          ; |SHIZHONGJISHU|p1~0          ; combout          ;
+; |SHIZHONGJISHU|p1~1          ; |SHIZHONGJISHU|p1~1          ; combout          ;
+; |SHIZHONGJISHU|M1~16         ; |SHIZHONGJISHU|M1~16         ; combout          ;
+; |SHIZHONGJISHU|M2~29         ; |SHIZHONGJISHU|M2~29         ; combout          ;
+; |SHIZHONGJISHU|UP_LAST       ; |SHIZHONGJISHU|UP_LAST       ; combout          ;
+; |SHIZHONGJISHU|DOWN_LAST     ; |SHIZHONGJISHU|DOWN_LAST     ; combout          ;
+; |SHIZHONGJISHU|clk_1         ; |SHIZHONGJISHU|clk_1~corein  ; combout          ;
+; |SHIZHONGJISHU|UP            ; |SHIZHONGJISHU|UP~corein     ; combout          ;
+; |SHIZHONGJISHU|DOWN          ; |SHIZHONGJISHU|DOWN~corein   ; combout          ;
+; |SHIZHONGJISHU|clk_1~clkctrl ; |SHIZHONGJISHU|clk_1~clkctrl ; outclk           ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |SHIZHONGJISHU|Add5~0              ; |SHIZHONGJISHU|Add5~0              ; combout          ;
+; |SHIZHONGJISHU|Add5~0              ; |SHIZHONGJISHU|Add5~1              ; cout             ;
+; |SHIZHONGJISHU|Add5~2              ; |SHIZHONGJISHU|Add5~2              ; combout          ;
+; |SHIZHONGJISHU|Add5~4              ; |SHIZHONGJISHU|Add5~4              ; combout          ;
+; |SHIZHONGJISHU|Add5~4              ; |SHIZHONGJISHU|Add5~5              ; cout             ;
+; |SHIZHONGJISHU|Add5~6              ; |SHIZHONGJISHU|Add5~6              ; combout          ;
+; |SHIZHONGJISHU|H1[0]~reg0_emulated ; |SHIZHONGJISHU|H1[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[0]~reg0head_lut  ; |SHIZHONGJISHU|H1[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H1[1]~reg0_emulated ; |SHIZHONGJISHU|H1[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[1]~reg0head_lut  ; |SHIZHONGJISHU|H1[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H1[2]~reg0_emulated ; |SHIZHONGJISHU|H1[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[2]~reg0head_lut  ; |SHIZHONGJISHU|H1[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H1[3]~reg0_emulated ; |SHIZHONGJISHU|H1[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[3]~reg0head_lut  ; |SHIZHONGJISHU|H1[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[0]~reg0_emulated ; |SHIZHONGJISHU|H2[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[0]~reg0head_lut  ; |SHIZHONGJISHU|H2[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[1]~reg0_emulated ; |SHIZHONGJISHU|H2[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[1]~reg0head_lut  ; |SHIZHONGJISHU|H2[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[2]~reg0_emulated ; |SHIZHONGJISHU|H2[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[2]~reg0head_lut  ; |SHIZHONGJISHU|H2[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[3]~reg0_emulated ; |SHIZHONGJISHU|H2[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[3]~reg0head_lut  ; |SHIZHONGJISHU|H2[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M1[0]~reg0_emulated ; |SHIZHONGJISHU|M1[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M1[0]~reg0head_lut  ; |SHIZHONGJISHU|M1[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M1[1]~reg0_emulated ; |SHIZHONGJISHU|M1[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M1[1]~reg0head_lut  ; |SHIZHONGJISHU|M1[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M1[2]~reg0_emulated ; |SHIZHONGJISHU|M1[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M1[2]~reg0head_lut  ; |SHIZHONGJISHU|M1[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M1[3]~reg0_emulated ; |SHIZHONGJISHU|M1[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M1[3]~reg0head_lut  ; |SHIZHONGJISHU|M1[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[0]~reg0_emulated ; |SHIZHONGJISHU|M2[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[0]~reg0head_lut  ; |SHIZHONGJISHU|M2[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[1]~reg0_emulated ; |SHIZHONGJISHU|M2[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[1]~reg0head_lut  ; |SHIZHONGJISHU|M2[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[2]~reg0_emulated ; |SHIZHONGJISHU|M2[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[2]~reg0head_lut  ; |SHIZHONGJISHU|M2[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[3]~reg0_emulated ; |SHIZHONGJISHU|M2[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[3]~reg0head_lut  ; |SHIZHONGJISHU|M2[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S1[0]~reg0_emulated ; |SHIZHONGJISHU|S1[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[0]~reg0head_lut  ; |SHIZHONGJISHU|S1[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S1[1]~reg0_emulated ; |SHIZHONGJISHU|S1[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[1]~reg0head_lut  ; |SHIZHONGJISHU|S1[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S1[2]~reg0_emulated ; |SHIZHONGJISHU|S1[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[2]~reg0head_lut  ; |SHIZHONGJISHU|S1[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S1[3]~reg0_emulated ; |SHIZHONGJISHU|S1[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[3]~reg0head_lut  ; |SHIZHONGJISHU|S1[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[0]~reg0_emulated ; |SHIZHONGJISHU|S2[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[0]~reg0head_lut  ; |SHIZHONGJISHU|S2[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[1]~reg0_emulated ; |SHIZHONGJISHU|S2[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[1]~reg0head_lut  ; |SHIZHONGJISHU|S2[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[2]~reg0_emulated ; |SHIZHONGJISHU|S2[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[2]~reg0head_lut  ; |SHIZHONGJISHU|S2[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[3]~reg0_emulated ; |SHIZHONGJISHU|S2[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[3]~reg0head_lut  ; |SHIZHONGJISHU|S2[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|Equal0~0            ; |SHIZHONGJISHU|Equal0~0            ; combout          ;
+; |SHIZHONGJISHU|Equal1~0            ; |SHIZHONGJISHU|Equal1~0            ; combout          ;
+; |SHIZHONGJISHU|Equal3~0            ; |SHIZHONGJISHU|Equal3~0            ; combout          ;
+; |SHIZHONGJISHU|Equal4~0            ; |SHIZHONGJISHU|Equal4~0            ; combout          ;
+; |SHIZHONGJISHU|H1[0]~8             ; |SHIZHONGJISHU|H1[0]~8             ; combout          ;
+; |SHIZHONGJISHU|Equal2~0            ; |SHIZHONGJISHU|Equal2~0            ; combout          ;
+; |SHIZHONGJISHU|H1[0]~9             ; |SHIZHONGJISHU|H1[0]~9             ; combout          ;
+; |SHIZHONGJISHU|S2~8                ; |SHIZHONGJISHU|S2~8                ; combout          ;
+; |SHIZHONGJISHU|H1~10               ; |SHIZHONGJISHU|H1~10               ; combout          ;
+; |SHIZHONGJISHU|H1~11               ; |SHIZHONGJISHU|H1~11               ; combout          ;
+; |SHIZHONGJISHU|H1~12               ; |SHIZHONGJISHU|H1~12               ; combout          ;
+; |SHIZHONGJISHU|H1~13               ; |SHIZHONGJISHU|H1~13               ; combout          ;
+; |SHIZHONGJISHU|Equal4~1            ; |SHIZHONGJISHU|Equal4~1            ; combout          ;
+; |SHIZHONGJISHU|H2[0]~reg0data_lut  ; |SHIZHONGJISHU|H2[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[0]~8             ; |SHIZHONGJISHU|H2[0]~8             ; combout          ;
+; |SHIZHONGJISHU|Equal8~0            ; |SHIZHONGJISHU|Equal8~0            ; combout          ;
+; |SHIZHONGJISHU|H2~9                ; |SHIZHONGJISHU|H2~9                ; combout          ;
+; |SHIZHONGJISHU|H2[1]~reg0data_lut  ; |SHIZHONGJISHU|H2[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2~10               ; |SHIZHONGJISHU|H2~10               ; combout          ;
+; |SHIZHONGJISHU|Equal4~2            ; |SHIZHONGJISHU|Equal4~2            ; combout          ;
+; |SHIZHONGJISHU|H2[2]~reg0data_lut  ; |SHIZHONGJISHU|H2[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2~11               ; |SHIZHONGJISHU|H2~11               ; combout          ;
+; |SHIZHONGJISHU|H2[3]~reg0data_lut  ; |SHIZHONGJISHU|H2[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2~12               ; |SHIZHONGJISHU|H2~12               ; combout          ;
+; |SHIZHONGJISHU|M1[0]~reg0data_lut  ; |SHIZHONGJISHU|M1[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M1[0]~8             ; |SHIZHONGJISHU|M1[0]~8             ; combout          ;
+; |SHIZHONGJISHU|Equal10~0           ; |SHIZHONGJISHU|Equal10~0           ; combout          ;
+; |SHIZHONGJISHU|M1~9                ; |SHIZHONGJISHU|M1~9                ; combout          ;
+; |SHIZHONGJISHU|M1~10               ; |SHIZHONGJISHU|M1~10               ; combout          ;
+; |SHIZHONGJISHU|M1~11               ; |SHIZHONGJISHU|M1~11               ; combout          ;
+; |SHIZHONGJISHU|M1[1]~reg0data_lut  ; |SHIZHONGJISHU|M1[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M1~12               ; |SHIZHONGJISHU|M1~12               ; combout          ;
+; |SHIZHONGJISHU|M1~13               ; |SHIZHONGJISHU|M1~13               ; combout          ;
+; |SHIZHONGJISHU|M1~14               ; |SHIZHONGJISHU|M1~14               ; combout          ;
+; |SHIZHONGJISHU|M1~15               ; |SHIZHONGJISHU|M1~15               ; combout          ;
+; |SHIZHONGJISHU|Add1~0              ; |SHIZHONGJISHU|Add1~0              ; combout          ;
+; |SHIZHONGJISHU|M1[2]~reg0data_lut  ; |SHIZHONGJISHU|M1[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M1~17               ; |SHIZHONGJISHU|M1~17               ; combout          ;
+; |SHIZHONGJISHU|M1~18               ; |SHIZHONGJISHU|M1~18               ; combout          ;
+; |SHIZHONGJISHU|M1~19               ; |SHIZHONGJISHU|M1~19               ; combout          ;
+; |SHIZHONGJISHU|M1[3]~reg0data_lut  ; |SHIZHONGJISHU|M1[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M1~20               ; |SHIZHONGJISHU|M1~20               ; combout          ;
+; |SHIZHONGJISHU|Add1~1              ; |SHIZHONGJISHU|Add1~1              ; combout          ;
+; |SHIZHONGJISHU|M1~21               ; |SHIZHONGJISHU|M1~21               ; combout          ;
+; |SHIZHONGJISHU|M2[0]~reg0data_lut  ; |SHIZHONGJISHU|M2[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[0]~14            ; |SHIZHONGJISHU|M2[0]~14            ; combout          ;
+; |SHIZHONGJISHU|M2~15               ; |SHIZHONGJISHU|M2~15               ; combout          ;
+; |SHIZHONGJISHU|M2~16               ; |SHIZHONGJISHU|M2~16               ; combout          ;
+; |SHIZHONGJISHU|M2[1]~reg0data_lut  ; |SHIZHONGJISHU|M2[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M2~17               ; |SHIZHONGJISHU|M2~17               ; combout          ;
+; |SHIZHONGJISHU|M2~18               ; |SHIZHONGJISHU|M2~18               ; combout          ;
+; |SHIZHONGJISHU|M2~19               ; |SHIZHONGJISHU|M2~19               ; combout          ;
+; |SHIZHONGJISHU|M2~20               ; |SHIZHONGJISHU|M2~20               ; combout          ;
+; |SHIZHONGJISHU|Equal2~1            ; |SHIZHONGJISHU|Equal2~1            ; combout          ;
+; |SHIZHONGJISHU|M2[2]~reg0data_lut  ; |SHIZHONGJISHU|M2[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M2~21               ; |SHIZHONGJISHU|M2~21               ; combout          ;
+; |SHIZHONGJISHU|Add2~0              ; |SHIZHONGJISHU|Add2~0              ; combout          ;
+; |SHIZHONGJISHU|M2~22               ; |SHIZHONGJISHU|M2~22               ; combout          ;
+; |SHIZHONGJISHU|M2~23               ; |SHIZHONGJISHU|M2~23               ; combout          ;
+; |SHIZHONGJISHU|M2~24               ; |SHIZHONGJISHU|M2~24               ; combout          ;
+; |SHIZHONGJISHU|Equal2~2            ; |SHIZHONGJISHU|Equal2~2            ; combout          ;
+; |SHIZHONGJISHU|M2[3]~reg0data_lut  ; |SHIZHONGJISHU|M2[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M2~25               ; |SHIZHONGJISHU|M2~25               ; combout          ;
+; |SHIZHONGJISHU|M2~26               ; |SHIZHONGJISHU|M2~26               ; combout          ;
+; |SHIZHONGJISHU|M2~27               ; |SHIZHONGJISHU|M2~27               ; combout          ;
+; |SHIZHONGJISHU|M2~28               ; |SHIZHONGJISHU|M2~28               ; combout          ;
+; |SHIZHONGJISHU|S1~8                ; |SHIZHONGJISHU|S1~8                ; combout          ;
+; |SHIZHONGJISHU|S1[0]~reg0data_lut  ; |SHIZHONGJISHU|S1[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~9                ; |SHIZHONGJISHU|S1~9                ; combout          ;
+; |SHIZHONGJISHU|S1[1]~reg0data_lut  ; |SHIZHONGJISHU|S1[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~10               ; |SHIZHONGJISHU|S1~10               ; combout          ;
+; |SHIZHONGJISHU|Add3~0              ; |SHIZHONGJISHU|Add3~0              ; combout          ;
+; |SHIZHONGJISHU|S1[2]~reg0data_lut  ; |SHIZHONGJISHU|S1[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~11               ; |SHIZHONGJISHU|S1~11               ; combout          ;
+; |SHIZHONGJISHU|Equal1~1            ; |SHIZHONGJISHU|Equal1~1            ; combout          ;
+; |SHIZHONGJISHU|S1[3]~reg0data_lut  ; |SHIZHONGJISHU|S1[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~12               ; |SHIZHONGJISHU|S1~12               ; combout          ;
+; |SHIZHONGJISHU|S2~9                ; |SHIZHONGJISHU|S2~9                ; combout          ;
+; |SHIZHONGJISHU|S2[0]~reg0data_lut  ; |SHIZHONGJISHU|S2[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~10               ; |SHIZHONGJISHU|S2~10               ; combout          ;
+; |SHIZHONGJISHU|S2[1]~reg0data_lut  ; |SHIZHONGJISHU|S2[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~11               ; |SHIZHONGJISHU|S2~11               ; combout          ;
+; |SHIZHONGJISHU|Equal0~1            ; |SHIZHONGJISHU|Equal0~1            ; combout          ;
+; |SHIZHONGJISHU|S2[2]~reg0data_lut  ; |SHIZHONGJISHU|S2[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~12               ; |SHIZHONGJISHU|S2~12               ; combout          ;
+; |SHIZHONGJISHU|Equal0~2            ; |SHIZHONGJISHU|Equal0~2            ; combout          ;
+; |SHIZHONGJISHU|S2[3]~reg0data_lut  ; |SHIZHONGJISHU|S2[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~13               ; |SHIZHONGJISHU|S2~13               ; combout          ;
+; |SHIZHONGJISHU|M2~30               ; |SHIZHONGJISHU|M2~30               ; combout          ;
+; |SHIZHONGJISHU|M2~31               ; |SHIZHONGJISHU|M2~31               ; combout          ;
+; |SHIZHONGJISHU|H1[0]~reg0latch     ; |SHIZHONGJISHU|H1[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H1[1]~reg0latch     ; |SHIZHONGJISHU|H1[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H1[2]~reg0latch     ; |SHIZHONGJISHU|H1[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H1[3]~reg0latch     ; |SHIZHONGJISHU|H1[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[0]~reg0latch     ; |SHIZHONGJISHU|H2[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[1]~reg0latch     ; |SHIZHONGJISHU|H2[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[2]~reg0latch     ; |SHIZHONGJISHU|H2[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[3]~reg0latch     ; |SHIZHONGJISHU|H2[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M1[0]~reg0latch     ; |SHIZHONGJISHU|M1[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M1[1]~reg0latch     ; |SHIZHONGJISHU|M1[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M1[2]~reg0latch     ; |SHIZHONGJISHU|M1[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M1[3]~reg0latch     ; |SHIZHONGJISHU|M1[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M2[0]~reg0latch     ; |SHIZHONGJISHU|M2[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M2[1]~reg0latch     ; |SHIZHONGJISHU|M2[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M2[2]~reg0latch     ; |SHIZHONGJISHU|M2[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M2[3]~reg0latch     ; |SHIZHONGJISHU|M2[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[0]~reg0latch     ; |SHIZHONGJISHU|S1[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[1]~reg0latch     ; |SHIZHONGJISHU|S1[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[2]~reg0latch     ; |SHIZHONGJISHU|S1[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[3]~reg0latch     ; |SHIZHONGJISHU|S1[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[0]~reg0latch     ; |SHIZHONGJISHU|S2[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[1]~reg0latch     ; |SHIZHONGJISHU|S2[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[2]~reg0latch     ; |SHIZHONGJISHU|S2[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[3]~reg0latch     ; |SHIZHONGJISHU|S2[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|SET_LAST[0]         ; |SHIZHONGJISHU|SET_LAST[0]         ; combout          ;
+; |SHIZHONGJISHU|SET_LAST[1]         ; |SHIZHONGJISHU|SET_LAST[1]         ; combout          ;
+; |SHIZHONGJISHU|H1[0]               ; |SHIZHONGJISHU|H1[0]               ; padio            ;
+; |SHIZHONGJISHU|H1[1]               ; |SHIZHONGJISHU|H1[1]               ; padio            ;
+; |SHIZHONGJISHU|H1[2]               ; |SHIZHONGJISHU|H1[2]               ; padio            ;
+; |SHIZHONGJISHU|H1[3]               ; |SHIZHONGJISHU|H1[3]               ; padio            ;
+; |SHIZHONGJISHU|H2[0]               ; |SHIZHONGJISHU|H2[0]               ; padio            ;
+; |SHIZHONGJISHU|H2[1]               ; |SHIZHONGJISHU|H2[1]               ; padio            ;
+; |SHIZHONGJISHU|H2[2]               ; |SHIZHONGJISHU|H2[2]               ; padio            ;
+; |SHIZHONGJISHU|H2[3]               ; |SHIZHONGJISHU|H2[3]               ; padio            ;
+; |SHIZHONGJISHU|M1[0]               ; |SHIZHONGJISHU|M1[0]               ; padio            ;
+; |SHIZHONGJISHU|M1[1]               ; |SHIZHONGJISHU|M1[1]               ; padio            ;
+; |SHIZHONGJISHU|M1[2]               ; |SHIZHONGJISHU|M1[2]               ; padio            ;
+; |SHIZHONGJISHU|M1[3]               ; |SHIZHONGJISHU|M1[3]               ; padio            ;
+; |SHIZHONGJISHU|M2[0]               ; |SHIZHONGJISHU|M2[0]               ; padio            ;
+; |SHIZHONGJISHU|M2[1]               ; |SHIZHONGJISHU|M2[1]               ; padio            ;
+; |SHIZHONGJISHU|M2[2]               ; |SHIZHONGJISHU|M2[2]               ; padio            ;
+; |SHIZHONGJISHU|M2[3]               ; |SHIZHONGJISHU|M2[3]               ; padio            ;
+; |SHIZHONGJISHU|S1[0]               ; |SHIZHONGJISHU|S1[0]               ; padio            ;
+; |SHIZHONGJISHU|S1[1]               ; |SHIZHONGJISHU|S1[1]               ; padio            ;
+; |SHIZHONGJISHU|S1[2]               ; |SHIZHONGJISHU|S1[2]               ; padio            ;
+; |SHIZHONGJISHU|S1[3]               ; |SHIZHONGJISHU|S1[3]               ; padio            ;
+; |SHIZHONGJISHU|S2[0]               ; |SHIZHONGJISHU|S2[0]               ; padio            ;
+; |SHIZHONGJISHU|S2[1]               ; |SHIZHONGJISHU|S2[1]               ; padio            ;
+; |SHIZHONGJISHU|S2[2]               ; |SHIZHONGJISHU|S2[2]               ; padio            ;
+; |SHIZHONGJISHU|S2[3]               ; |SHIZHONGJISHU|S2[3]               ; padio            ;
+; |SHIZHONGJISHU|PROCESS_END         ; |SHIZHONGJISHU|PROCESS_END         ; padio            ;
+; |SHIZHONGJISHU|SET[1]              ; |SHIZHONGJISHU|SET[1]~corein       ; combout          ;
+; |SHIZHONGJISHU|SET[0]              ; |SHIZHONGJISHU|SET[0]~corein       ; combout          ;
++------------------------------------+------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                   ;
++------------------------------------+------------------------------------+------------------+
+; Node Name                          ; Output Port Name                   ; Output Port Type ;
++------------------------------------+------------------------------------+------------------+
+; |SHIZHONGJISHU|Add5~2              ; |SHIZHONGJISHU|Add5~3              ; cout             ;
+; |SHIZHONGJISHU|H1[0]~reg0_emulated ; |SHIZHONGJISHU|H1[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[0]~reg0head_lut  ; |SHIZHONGJISHU|H1[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H1[1]~reg0_emulated ; |SHIZHONGJISHU|H1[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[1]~reg0head_lut  ; |SHIZHONGJISHU|H1[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H1[2]~reg0_emulated ; |SHIZHONGJISHU|H1[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[2]~reg0head_lut  ; |SHIZHONGJISHU|H1[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H1[3]~reg0_emulated ; |SHIZHONGJISHU|H1[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H1[3]~reg0head_lut  ; |SHIZHONGJISHU|H1[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[0]~reg0_emulated ; |SHIZHONGJISHU|H2[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[0]~reg0head_lut  ; |SHIZHONGJISHU|H2[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[1]~reg0_emulated ; |SHIZHONGJISHU|H2[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[1]~reg0head_lut  ; |SHIZHONGJISHU|H2[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[2]~reg0_emulated ; |SHIZHONGJISHU|H2[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[2]~reg0head_lut  ; |SHIZHONGJISHU|H2[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[3]~reg0_emulated ; |SHIZHONGJISHU|H2[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|H2[3]~reg0head_lut  ; |SHIZHONGJISHU|H2[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M1[0]~reg0_emulated ; |SHIZHONGJISHU|M1[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M1[1]~reg0_emulated ; |SHIZHONGJISHU|M1[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M1[2]~reg0_emulated ; |SHIZHONGJISHU|M1[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M1[3]~reg0_emulated ; |SHIZHONGJISHU|M1[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[0]~reg0_emulated ; |SHIZHONGJISHU|M2[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[0]~reg0head_lut  ; |SHIZHONGJISHU|M2[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[1]~reg0_emulated ; |SHIZHONGJISHU|M2[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[2]~reg0_emulated ; |SHIZHONGJISHU|M2[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|M2[3]~reg0_emulated ; |SHIZHONGJISHU|M2[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[0]~reg0_emulated ; |SHIZHONGJISHU|S1[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[0]~reg0head_lut  ; |SHIZHONGJISHU|S1[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S1[1]~reg0_emulated ; |SHIZHONGJISHU|S1[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[1]~reg0head_lut  ; |SHIZHONGJISHU|S1[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S1[2]~reg0_emulated ; |SHIZHONGJISHU|S1[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[2]~reg0head_lut  ; |SHIZHONGJISHU|S1[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S1[3]~reg0_emulated ; |SHIZHONGJISHU|S1[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S1[3]~reg0head_lut  ; |SHIZHONGJISHU|S1[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[0]~reg0_emulated ; |SHIZHONGJISHU|S2[0]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[0]~reg0head_lut  ; |SHIZHONGJISHU|S2[0]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[1]~reg0_emulated ; |SHIZHONGJISHU|S2[1]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[1]~reg0head_lut  ; |SHIZHONGJISHU|S2[1]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[2]~reg0_emulated ; |SHIZHONGJISHU|S2[2]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[2]~reg0head_lut  ; |SHIZHONGJISHU|S2[2]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|S2[3]~reg0_emulated ; |SHIZHONGJISHU|S2[3]~reg0_emulated ; regout           ;
+; |SHIZHONGJISHU|S2[3]~reg0head_lut  ; |SHIZHONGJISHU|S2[3]~reg0head_lut  ; combout          ;
+; |SHIZHONGJISHU|Equal0~0            ; |SHIZHONGJISHU|Equal0~0            ; combout          ;
+; |SHIZHONGJISHU|Equal1~0            ; |SHIZHONGJISHU|Equal1~0            ; combout          ;
+; |SHIZHONGJISHU|Equal3~0            ; |SHIZHONGJISHU|Equal3~0            ; combout          ;
+; |SHIZHONGJISHU|Equal4~0            ; |SHIZHONGJISHU|Equal4~0            ; combout          ;
+; |SHIZHONGJISHU|H1[0]~8             ; |SHIZHONGJISHU|H1[0]~8             ; combout          ;
+; |SHIZHONGJISHU|Equal2~0            ; |SHIZHONGJISHU|Equal2~0            ; combout          ;
+; |SHIZHONGJISHU|H1[0]~9             ; |SHIZHONGJISHU|H1[0]~9             ; combout          ;
+; |SHIZHONGJISHU|S2~8                ; |SHIZHONGJISHU|S2~8                ; combout          ;
+; |SHIZHONGJISHU|H1~10               ; |SHIZHONGJISHU|H1~10               ; combout          ;
+; |SHIZHONGJISHU|H1~11               ; |SHIZHONGJISHU|H1~11               ; combout          ;
+; |SHIZHONGJISHU|H1~12               ; |SHIZHONGJISHU|H1~12               ; combout          ;
+; |SHIZHONGJISHU|H1~13               ; |SHIZHONGJISHU|H1~13               ; combout          ;
+; |SHIZHONGJISHU|Equal4~1            ; |SHIZHONGJISHU|Equal4~1            ; combout          ;
+; |SHIZHONGJISHU|H2[0]~reg0data_lut  ; |SHIZHONGJISHU|H2[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2[0]~8             ; |SHIZHONGJISHU|H2[0]~8             ; combout          ;
+; |SHIZHONGJISHU|Equal8~0            ; |SHIZHONGJISHU|Equal8~0            ; combout          ;
+; |SHIZHONGJISHU|H2~9                ; |SHIZHONGJISHU|H2~9                ; combout          ;
+; |SHIZHONGJISHU|H2[1]~reg0data_lut  ; |SHIZHONGJISHU|H2[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2~10               ; |SHIZHONGJISHU|H2~10               ; combout          ;
+; |SHIZHONGJISHU|Equal4~2            ; |SHIZHONGJISHU|Equal4~2            ; combout          ;
+; |SHIZHONGJISHU|H2[2]~reg0data_lut  ; |SHIZHONGJISHU|H2[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2~11               ; |SHIZHONGJISHU|H2~11               ; combout          ;
+; |SHIZHONGJISHU|H2[3]~reg0data_lut  ; |SHIZHONGJISHU|H2[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|H2~12               ; |SHIZHONGJISHU|H2~12               ; combout          ;
+; |SHIZHONGJISHU|M1[0]~reg0data_lut  ; |SHIZHONGJISHU|M1[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M1[0]~8             ; |SHIZHONGJISHU|M1[0]~8             ; combout          ;
+; |SHIZHONGJISHU|M1[1]~reg0data_lut  ; |SHIZHONGJISHU|M1[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M1~12               ; |SHIZHONGJISHU|M1~12               ; combout          ;
+; |SHIZHONGJISHU|M1[2]~reg0data_lut  ; |SHIZHONGJISHU|M1[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|Equal3~1            ; |SHIZHONGJISHU|Equal3~1            ; combout          ;
+; |SHIZHONGJISHU|M1[3]~reg0data_lut  ; |SHIZHONGJISHU|M1[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[0]~reg0data_lut  ; |SHIZHONGJISHU|M2[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M2[0]~14            ; |SHIZHONGJISHU|M2[0]~14            ; combout          ;
+; |SHIZHONGJISHU|M2~15               ; |SHIZHONGJISHU|M2~15               ; combout          ;
+; |SHIZHONGJISHU|M2~16               ; |SHIZHONGJISHU|M2~16               ; combout          ;
+; |SHIZHONGJISHU|M2[1]~reg0data_lut  ; |SHIZHONGJISHU|M2[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|Equal2~1            ; |SHIZHONGJISHU|Equal2~1            ; combout          ;
+; |SHIZHONGJISHU|M2[2]~reg0data_lut  ; |SHIZHONGJISHU|M2[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|M2~21               ; |SHIZHONGJISHU|M2~21               ; combout          ;
+; |SHIZHONGJISHU|Equal2~2            ; |SHIZHONGJISHU|Equal2~2            ; combout          ;
+; |SHIZHONGJISHU|M2[3]~reg0data_lut  ; |SHIZHONGJISHU|M2[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~8                ; |SHIZHONGJISHU|S1~8                ; combout          ;
+; |SHIZHONGJISHU|S1[0]~reg0data_lut  ; |SHIZHONGJISHU|S1[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~9                ; |SHIZHONGJISHU|S1~9                ; combout          ;
+; |SHIZHONGJISHU|S1[1]~reg0data_lut  ; |SHIZHONGJISHU|S1[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~10               ; |SHIZHONGJISHU|S1~10               ; combout          ;
+; |SHIZHONGJISHU|Add3~0              ; |SHIZHONGJISHU|Add3~0              ; combout          ;
+; |SHIZHONGJISHU|S1[2]~reg0data_lut  ; |SHIZHONGJISHU|S1[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~11               ; |SHIZHONGJISHU|S1~11               ; combout          ;
+; |SHIZHONGJISHU|Equal1~1            ; |SHIZHONGJISHU|Equal1~1            ; combout          ;
+; |SHIZHONGJISHU|S1[3]~reg0data_lut  ; |SHIZHONGJISHU|S1[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S1~12               ; |SHIZHONGJISHU|S1~12               ; combout          ;
+; |SHIZHONGJISHU|S2~9                ; |SHIZHONGJISHU|S2~9                ; combout          ;
+; |SHIZHONGJISHU|S2[0]~reg0data_lut  ; |SHIZHONGJISHU|S2[0]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~10               ; |SHIZHONGJISHU|S2~10               ; combout          ;
+; |SHIZHONGJISHU|S2[1]~reg0data_lut  ; |SHIZHONGJISHU|S2[1]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~11               ; |SHIZHONGJISHU|S2~11               ; combout          ;
+; |SHIZHONGJISHU|Equal0~1            ; |SHIZHONGJISHU|Equal0~1            ; combout          ;
+; |SHIZHONGJISHU|S2[2]~reg0data_lut  ; |SHIZHONGJISHU|S2[2]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~12               ; |SHIZHONGJISHU|S2~12               ; combout          ;
+; |SHIZHONGJISHU|Equal0~2            ; |SHIZHONGJISHU|Equal0~2            ; combout          ;
+; |SHIZHONGJISHU|S2[3]~reg0data_lut  ; |SHIZHONGJISHU|S2[3]~reg0data_lut  ; combout          ;
+; |SHIZHONGJISHU|S2~13               ; |SHIZHONGJISHU|S2~13               ; combout          ;
+; |SHIZHONGJISHU|M2~30               ; |SHIZHONGJISHU|M2~30               ; combout          ;
+; |SHIZHONGJISHU|H1[0]~reg0latch     ; |SHIZHONGJISHU|H1[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H1[1]~reg0latch     ; |SHIZHONGJISHU|H1[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H1[2]~reg0latch     ; |SHIZHONGJISHU|H1[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H1[3]~reg0latch     ; |SHIZHONGJISHU|H1[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[0]~reg0latch     ; |SHIZHONGJISHU|H2[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[1]~reg0latch     ; |SHIZHONGJISHU|H2[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[2]~reg0latch     ; |SHIZHONGJISHU|H2[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|H2[3]~reg0latch     ; |SHIZHONGJISHU|H2[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|M2[0]~reg0latch     ; |SHIZHONGJISHU|M2[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[0]~reg0latch     ; |SHIZHONGJISHU|S1[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[1]~reg0latch     ; |SHIZHONGJISHU|S1[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[2]~reg0latch     ; |SHIZHONGJISHU|S1[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S1[3]~reg0latch     ; |SHIZHONGJISHU|S1[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[0]~reg0latch     ; |SHIZHONGJISHU|S2[0]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[1]~reg0latch     ; |SHIZHONGJISHU|S2[1]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[2]~reg0latch     ; |SHIZHONGJISHU|S2[2]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|S2[3]~reg0latch     ; |SHIZHONGJISHU|S2[3]~reg0latch     ; combout          ;
+; |SHIZHONGJISHU|SET_LAST[0]         ; |SHIZHONGJISHU|SET_LAST[0]         ; combout          ;
+; |SHIZHONGJISHU|SET_LAST[1]         ; |SHIZHONGJISHU|SET_LAST[1]         ; combout          ;
+; |SHIZHONGJISHU|H1[0]               ; |SHIZHONGJISHU|H1[0]               ; padio            ;
+; |SHIZHONGJISHU|H1[1]               ; |SHIZHONGJISHU|H1[1]               ; padio            ;
+; |SHIZHONGJISHU|H1[2]               ; |SHIZHONGJISHU|H1[2]               ; padio            ;
+; |SHIZHONGJISHU|H1[3]               ; |SHIZHONGJISHU|H1[3]               ; padio            ;
+; |SHIZHONGJISHU|H2[0]               ; |SHIZHONGJISHU|H2[0]               ; padio            ;
+; |SHIZHONGJISHU|H2[1]               ; |SHIZHONGJISHU|H2[1]               ; padio            ;
+; |SHIZHONGJISHU|H2[2]               ; |SHIZHONGJISHU|H2[2]               ; padio            ;
+; |SHIZHONGJISHU|H2[3]               ; |SHIZHONGJISHU|H2[3]               ; padio            ;
+; |SHIZHONGJISHU|M2[0]               ; |SHIZHONGJISHU|M2[0]               ; padio            ;
+; |SHIZHONGJISHU|S1[0]               ; |SHIZHONGJISHU|S1[0]               ; padio            ;
+; |SHIZHONGJISHU|S1[1]               ; |SHIZHONGJISHU|S1[1]               ; padio            ;
+; |SHIZHONGJISHU|S1[2]               ; |SHIZHONGJISHU|S1[2]               ; padio            ;
+; |SHIZHONGJISHU|S1[3]               ; |SHIZHONGJISHU|S1[3]               ; padio            ;
+; |SHIZHONGJISHU|S2[0]               ; |SHIZHONGJISHU|S2[0]               ; padio            ;
+; |SHIZHONGJISHU|S2[1]               ; |SHIZHONGJISHU|S2[1]               ; padio            ;
+; |SHIZHONGJISHU|S2[2]               ; |SHIZHONGJISHU|S2[2]               ; padio            ;
+; |SHIZHONGJISHU|S2[3]               ; |SHIZHONGJISHU|S2[3]               ; padio            ;
+; |SHIZHONGJISHU|PROCESS_END         ; |SHIZHONGJISHU|PROCESS_END         ; padio            ;
+; |SHIZHONGJISHU|START               ; |SHIZHONGJISHU|START~corein        ; combout          ;
+; |SHIZHONGJISHU|SET[1]              ; |SHIZHONGJISHU|SET[1]~corein       ; combout          ;
+; |SHIZHONGJISHU|SET[0]              ; |SHIZHONGJISHU|SET[0]~corein       ; combout          ;
+; |SHIZHONGJISHU|START~clkctrl       ; |SHIZHONGJISHU|START~clkctrl       ; outclk           ;
++------------------------------------+------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Wed Jan 07 09:36:51 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ShiZhongJiShu -c ShiZhongJiShu
+Info: Using vector source file "I:/MyProject/ShiZhongJiShu/ShiZhongJiShu.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock high time violation at 72.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 72.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 72.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 72.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 72.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 72.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 73.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 73.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 73.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 73.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 73.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 73.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 73.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 73.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 73.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 74.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 74.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 74.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 74.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 74.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 74.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 74.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 74.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 74.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 75.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 75.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 75.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 75.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 75.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 75.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 75.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 75.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 75.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 76.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 76.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 76.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 76.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 76.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 76.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 76.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 76.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 76.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 77.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 77.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 77.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 77.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 77.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 77.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 77.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 77.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 77.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 78.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 78.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 78.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 78.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 78.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 78.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 78.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 78.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 78.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 79.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 79.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 79.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 79.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 79.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 79.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 79.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 79.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 79.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 80.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 80.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 80.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 80.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 80.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 80.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 80.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 80.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 80.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 81.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 81.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 81.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 81.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 81.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 81.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 81.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 81.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 81.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 82.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 82.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 82.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 82.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 82.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 82.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 82.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 82.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 82.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 83.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 83.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 83.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 83.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 83.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 83.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 83.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 83.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 83.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 84.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 84.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 84.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 84.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 84.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 84.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 84.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 84.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 84.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 85.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 85.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 85.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 85.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 85.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 85.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 85.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 85.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 85.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 86.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 86.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 86.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 86.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 86.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 86.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 86.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 86.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 86.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 87.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 87.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 87.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 87.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 87.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 87.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 87.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 87.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 87.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 88.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 88.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 88.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 88.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 88.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 88.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 88.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 88.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 88.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 89.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 89.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 89.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 89.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 89.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 89.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 89.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 89.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 89.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 90.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 90.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 90.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 90.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 90.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 90.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 90.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 90.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 90.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 91.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 91.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 91.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 91.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 91.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 91.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 91.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 91.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 91.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 92.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 92.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 92.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 92.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 92.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 92.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 92.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 92.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 92.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 93.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 93.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 93.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 93.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 93.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 93.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 93.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 93.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 93.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 94.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 94.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 94.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 94.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 94.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 94.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 94.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 94.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 94.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 95.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 95.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 95.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 95.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 95.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 95.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 95.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 95.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 95.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 96.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 96.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 96.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 96.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 96.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 96.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 96.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 96.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 96.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 97.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 97.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 97.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 97.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 97.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 97.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 97.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 97.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 97.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 98.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 98.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 98.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 98.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 98.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 98.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 98.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 98.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 98.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 99.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 99.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 99.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 99.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 99.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 99.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 99.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 99.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 99.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 100.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 100.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 100.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 100.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 100.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 100.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 100.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 100.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 100.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 101.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 101.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 101.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 101.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 101.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 101.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 101.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 101.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 101.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 102.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 102.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 102.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 102.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 102.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 102.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 102.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 102.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 102.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 103.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 103.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 103.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 103.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 103.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 103.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 103.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 103.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 103.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 104.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 104.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 104.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 104.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 104.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 104.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 104.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 104.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 104.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 105.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 105.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 105.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 105.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 105.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 105.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 105.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 105.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 105.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 106.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 106.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 106.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 106.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 106.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 106.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 106.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 106.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 106.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 107.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 107.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 107.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 107.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 107.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 107.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 107.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 107.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 107.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 108.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 108.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 108.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 108.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 108.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 108.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 108.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 108.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 108.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 109.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 109.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 109.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 109.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 109.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 109.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 109.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 109.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 109.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 110.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 110.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 110.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 110.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 110.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 110.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 110.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 110.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 110.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 111.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 111.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 111.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 111.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 111.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 111.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 111.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 111.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 111.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 112.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 112.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 112.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 112.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 112.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 112.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 112.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 112.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 112.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 113.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 113.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Warning: Found clock high time violation at 113.35 ns on register "|SHIZHONGJISHU|H2[1]~reg0_emulated"
+Warning: Found clock high time violation at 113.35 ns on register "|SHIZHONGJISHU|M2[0]~reg0_emulated"
+Warning: Found clock high time violation at 113.35 ns on register "|SHIZHONGJISHU|S2[0]~reg0_emulated"
+Warning: Found clock high time violation at 113.35 ns on register "|SHIZHONGJISHU|S2[1]~reg0_emulated"
+Warning: Found clock high time violation at 113.35 ns on register "|SHIZHONGJISHU|S2[2]~reg0_emulated"
+Warning: Found clock high time violation at 113.35 ns on register "|SHIZHONGJISHU|S2[3]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|H1[1]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|H1[2]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|H1[3]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|H2[2]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|H2[3]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|M2[2]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|S1[0]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|S1[1]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|S1[2]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|M2[3]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|M1[0]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|M1[1]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|M1[2]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|M1[3]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|M2[1]~reg0_emulated"
+Warning: Found clock high time violation at 113.36 ns on register "|SHIZHONGJISHU|H1[0]~reg0_emulated"
+Warning: Found clock high time violation at 114.33 ns on register "|SHIZHONGJISHU|S1[3]~reg0_emulated"
+Warning: Found clock high time violation at 114.35 ns on register "|SHIZHONGJISHU|H2[0]~reg0_emulated"
+Info: Detected more than 1000 clock time violations -- stopped clock time violation reporting
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       4.74 %
+Info: Number of transitions in simulation is 11044
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 1000 warnings
+    Info: Peak virtual memory: 191 megabytes
+    Info: Processing ended: Wed Jan 07 09:36:52 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

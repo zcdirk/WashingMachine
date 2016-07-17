@@ -1,0 +1,310 @@
+Analysis & Synthesis report for ShiZhongJiShu
+Wed Jan 07 09:36:14 2015
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jan 07 09:36:14 2015    ;
+; Quartus II 64-Bit Version          ; 9.1 Build 222 10/21/2009 SJ Full Version ;
+; Revision Name                      ; ShiZhongJiShu                            ;
+; Top-level Entity Name              ; SHIZHONGJISHU                            ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 151                                      ;
+;     Total combinational functions  ; 151                                      ;
+;     Dedicated logic registers      ; 24                                       ;
+; Total registers                    ; 24                                       ;
+; Total pins                         ; 31                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; ShiZhongJiShu      ; ShiZhongJiShu      ;
+; Family name                                                                ; Cyclone II         ; Stratix II         ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                         ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                              ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                 ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+
+; ShiZhongJiShu.vhd                ; yes             ; User VHDL File  ; I:/MyProject/ShiZhongJiShu/ShiZhongJiShu.vhd ;
++----------------------------------+-----------------+-----------------+----------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 151   ;
+;                                             ;       ;
+; Total combinational functions               ; 151   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 83    ;
+;     -- 3 input functions                    ; 40    ;
+;     -- <=2 input functions                  ; 28    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 148   ;
+;     -- arithmetic mode                      ; 3     ;
+;                                             ;       ;
+; Total registers                             ; 24    ;
+;     -- Dedicated logic registers            ; 24    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 31    ;
+; Maximum fan-out node                        ; START ;
+; Maximum fan-out                             ; 76    ;
+; Total fan-out                               ; 623   ;
+; Average fan-out                             ; 3.02  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |SHIZHONGJISHU             ; 151 (151)         ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 31   ; 0            ; |SHIZHONGJISHU      ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; SET_LAST[0]                                        ; START               ; yes                    ;
+; SET_LAST[1]                                        ; START               ; yes                    ;
+; DOWN_LAST                                          ; START               ; yes                    ;
+; UP_LAST                                            ; START               ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; PROCESS_END~reg0                      ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 24    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 24    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |SHIZHONGJISHU|M1          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Wed Jan 07 09:36:13 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ShiZhongJiShu -c ShiZhongJiShu
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Found 2 design units, including 1 entities, in source file shizhongjishu.vhd
+    Info: Found design unit 1: SHIZHONGJISHU-S
+    Info: Found entity 1: SHIZHONGJISHU
+Info: Elaborating entity "ShiZhongJiShu" for the top level hierarchy
+Warning (10631): VHDL Process Statement warning at ShiZhongJiShu.vhd(22): inferring latch(es) for signal or variable "SET_LAST", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ShiZhongJiShu.vhd(22): inferring latch(es) for signal or variable "UP_LAST", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at ShiZhongJiShu.vhd(22): inferring latch(es) for signal or variable "DOWN_LAST", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "DOWN_LAST" at ShiZhongJiShu.vhd(22)
+Info (10041): Inferred latch for "UP_LAST" at ShiZhongJiShu.vhd(22)
+Info (10041): Inferred latch for "SET_LAST[0]" at ShiZhongJiShu.vhd(22)
+Info (10041): Inferred latch for "SET_LAST[1]" at ShiZhongJiShu.vhd(22)
+Warning: Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "H1[0]~reg0" is converted into an equivalent circuit using register "H1[0]~reg0_emulated" and latch "H1[0]~reg0latch"
+    Warning (13310): Register "H1[1]~reg0" is converted into an equivalent circuit using register "H1[1]~reg0_emulated" and latch "H1[1]~reg0latch"
+    Warning (13310): Register "H1[2]~reg0" is converted into an equivalent circuit using register "H1[2]~reg0_emulated" and latch "H1[2]~reg0latch"
+    Warning (13310): Register "H1[3]~reg0" is converted into an equivalent circuit using register "H1[3]~reg0_emulated" and latch "H1[3]~reg0latch"
+    Warning (13310): Register "H2[0]~reg0" is converted into an equivalent circuit using register "H2[0]~reg0_emulated" and latch "H2[0]~reg0latch"
+    Warning (13310): Register "H2[1]~reg0" is converted into an equivalent circuit using register "H2[1]~reg0_emulated" and latch "H2[1]~reg0latch"
+    Warning (13310): Register "H2[2]~reg0" is converted into an equivalent circuit using register "H2[2]~reg0_emulated" and latch "H2[2]~reg0latch"
+    Warning (13310): Register "H2[3]~reg0" is converted into an equivalent circuit using register "H2[3]~reg0_emulated" and latch "H2[3]~reg0latch"
+    Warning (13310): Register "M1[0]~reg0" is converted into an equivalent circuit using register "M1[0]~reg0_emulated" and latch "M1[0]~reg0latch"
+    Warning (13310): Register "M1[1]~reg0" is converted into an equivalent circuit using register "M1[1]~reg0_emulated" and latch "M1[1]~reg0latch"
+    Warning (13310): Register "M1[2]~reg0" is converted into an equivalent circuit using register "M1[2]~reg0_emulated" and latch "M1[2]~reg0latch"
+    Warning (13310): Register "M1[3]~reg0" is converted into an equivalent circuit using register "M1[3]~reg0_emulated" and latch "M1[3]~reg0latch"
+    Warning (13310): Register "M2[0]~reg0" is converted into an equivalent circuit using register "M2[0]~reg0_emulated" and latch "M2[0]~reg0latch"
+    Warning (13310): Register "M2[1]~reg0" is converted into an equivalent circuit using register "M2[1]~reg0_emulated" and latch "M2[1]~reg0latch"
+    Warning (13310): Register "M2[2]~reg0" is converted into an equivalent circuit using register "M2[2]~reg0_emulated" and latch "M2[2]~reg0latch"
+    Warning (13310): Register "M2[3]~reg0" is converted into an equivalent circuit using register "M2[3]~reg0_emulated" and latch "M2[3]~reg0latch"
+    Warning (13310): Register "S1[0]~reg0" is converted into an equivalent circuit using register "S1[0]~reg0_emulated" and latch "S1[0]~reg0latch"
+    Warning (13310): Register "S1[1]~reg0" is converted into an equivalent circuit using register "S1[1]~reg0_emulated" and latch "S1[1]~reg0latch"
+    Warning (13310): Register "S1[2]~reg0" is converted into an equivalent circuit using register "S1[2]~reg0_emulated" and latch "S1[2]~reg0latch"
+    Warning (13310): Register "S1[3]~reg0" is converted into an equivalent circuit using register "S1[3]~reg0_emulated" and latch "S1[3]~reg0latch"
+    Warning (13310): Register "S2[0]~reg0" is converted into an equivalent circuit using register "S2[0]~reg0_emulated" and latch "S2[0]~reg0latch"
+    Warning (13310): Register "S2[1]~reg0" is converted into an equivalent circuit using register "S2[1]~reg0_emulated" and latch "S2[1]~reg0latch"
+    Warning (13310): Register "S2[2]~reg0" is converted into an equivalent circuit using register "S2[2]~reg0_emulated" and latch "S2[2]~reg0latch"
+    Warning (13310): Register "S2[3]~reg0" is converted into an equivalent circuit using register "S2[3]~reg0_emulated" and latch "S2[3]~reg0latch"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "PROCESS_END" is stuck at VCC
+Info: Implemented 186 device resources after synthesis - the final resource count might be different
+    Info: Implemented 6 input pins
+    Info: Implemented 25 output pins
+    Info: Implemented 155 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 311 megabytes
+    Info: Processing ended: Wed Jan 07 09:36:14 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
+
+

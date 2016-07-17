@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jan 07 08:50:12 2015
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : FenPinQi
+Top-level Entity Name : FENPINQI
+Family : Cyclone II
+Total logic elements : 22
+    Total combinational functions : 21
+    Dedicated logic registers : 15
+Total registers : 15
+Total pins : 5
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

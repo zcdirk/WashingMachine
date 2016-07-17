@@ -1,0 +1,132 @@
+# Reading D:/Program Files/altera/13/modelsim_ae/tcl/vsim/pref.tcl 
+# do FangDou_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\Program Files\altera\13\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\Program Files\altera\13\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {I:/MyProject/FangDou/FangDou.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FangDou
+# -- Compiling architecture F of FangDou
+# 
+vsim work.fangdou
+# vsim work.fangdou 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fangdou(f)
+wave create -pattern none -portmode in -language vhdl /fangdou/clk_100
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/GC_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/SW_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/YY_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/UP_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/DOWN_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/MS_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/DY_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/QT_IN
+# fangdou
+wave create -pattern none -portmode in -language vhdl /fangdou/RST_IN
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/GC
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/SW
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/YY
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/UP
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/DOWN
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/MS
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/DY
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/QT
+# fangdou
+wave create -pattern none -portmode out -language vhdl /fangdou/RST
+# fangdou
+wave modify -driver freeze -pattern clock -initialvalue 0 -period 1ns -dutycycle 50 -starttime 0ns -endtime 100ns Edit:/fangdou/clk_100
+# fangdou
+wave modify -driver freeze -pattern constant -value 0 -starttime 0ns -endtime 1ns Edit:/fangdou/GC_IN
+# fangdou
+wave modify -driver freeze -pattern constant -value 1 -starttime 1ns -endtime 2ns Edit:/fangdou/GC_IN
+# fangdou
+wave modify -driver freeze -pattern constant -value 0 -starttime 2ns -endtime 7ns Edit:/fangdou/GC_IN
+# fangdou
+wave modify -driver freeze -pattern constant -value 1 -starttime 7ns -endtime 20ns Edit:/fangdou/GC_IN
+# fangdou
+wave modify -driver freeze -pattern constant -value 0 -starttime 20ns -endtime 100ns Edit:/fangdou/GC_IN
+# fangdou
+add wave -position insertpoint  \
+sim:/fangdou/GC
+run -all
+# ** Fatal: (vsim-3421) Value 10 for TEMP1 is out of range 0 to 9.
+#    Time: 9 ns  Iteration: 0  Process: /fangdou/P1 File: I:/MyProject/FangDou/FangDou.vhd
+# Fatal error in Process P1 at I:/MyProject/FangDou/FangDou.vhd line 21
+# 
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 
+run
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 
+run -continue
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 
+add wave -position insertpoint  \
+sim:/fangdou/GC
+run -all
+# Cannot continue because of fatal error.
+# HDL call sequence:
+# Stopped at I:/MyProject/FangDou/FangDou.vhd 21 Process P1
+# 

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jan 06 23:28:39 2015
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : FangDou
+Top-level Entity Name : FangDou
+Family : Cyclone II
+Device : EP2C5T144C6
+Timing Models : Final
+Total logic elements : 89 / 4,608 ( 2 % )
+    Total combinational functions : 73 / 4,608 ( 2 % )
+    Dedicated logic registers : 54 / 4,608 ( 1 % )
+Total registers : 54
+Total pins : 19 / 89 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

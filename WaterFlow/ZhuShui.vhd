@@ -1,0 +1,33 @@
+--注水模块--
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY ZHUSHUI IS
+PORT(ZS_START,FS_START:IN STD_LOGIC;        --开始注水、开始放水信号--
+     SW_MODE:IN INTEGER RANGE 1 TO 3;       --水位模式信号--
+	  clk_1:IN STD_LOGIC;                    --1Hz时钟，用于计时--
+	  ZS_CONTROLL:OUT INTEGER RANGE 0 TO 2); --0为暂停，1为注水，2为放水（其中暂停时放水开关关闭，水位不下降）--
+END ENTITY ZHUSHUI;
+
+ARCHITECTURE Z OF ZHUSHUI IS 
+SIGNAL COUNT: INTEGER;                       --用于计数--
+BEGIN
+p:PROCESS(clk_1,ZS_START,FS_START,SW_MODE)
+BEGIN
+IF(clk_1'EVENT AND clk_1='1')THEN    
+--注水部分--
+ IF(ZS_START='1')THEN              
+  IF(COUNT<SW_MODE*20)THEN
+   COUNT<=COUNT+1;
+	ZS_CONTROLL<=1;
+	ELSE COUNT<=61;ZS_CONTROLL<=0; --使洗衣机不再注水--
+  END IF;
+--放水部分--
+ ELSIF(FS_START='1')THEN
+  ZS_CONTROLL<=2;      --放水开关一直打开--
+ ELSE ZS_CONTROLL<=0;  --暂停--
+ END IF;
+END IF;
+END PROCESS p;
+END Z;

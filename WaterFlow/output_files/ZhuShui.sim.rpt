@@ -1,0 +1,442 @@
+Simulator report for ZhuShui
+Wed Jan 07 09:16:24 2015
+Quartus II 64-Bit Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 200.0 ns     ;
+; Simulation Netlist Size     ; 120 nodes    ;
+; Simulation Coverage         ;      15.23 % ;
+; Total Number of Transitions ; 486          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5T144C6  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      15.23 % ;
+; Total nodes checked                                 ; 120          ;
+; Total output ports checked                          ; 151          ;
+; Total output ports with complete 1/0-value coverage ; 23           ;
+; Total output ports with no 1/0-value coverage       ; 127          ;
+; Total output ports with no 1-value coverage         ; 127          ;
+; Total output ports with no 0-value coverage         ; 128          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |ZHUSHUI|Add0~0              ; |ZHUSHUI|Add0~0              ; combout          ;
+; |ZHUSHUI|Add0~0              ; |ZHUSHUI|Add0~1              ; cout             ;
+; |ZHUSHUI|Add0~2              ; |ZHUSHUI|Add0~2              ; combout          ;
+; |ZHUSHUI|Add0~2              ; |ZHUSHUI|Add0~3              ; cout             ;
+; |ZHUSHUI|Add0~4              ; |ZHUSHUI|Add0~4              ; combout          ;
+; |ZHUSHUI|Add0~4              ; |ZHUSHUI|Add0~5              ; cout             ;
+; |ZHUSHUI|Add0~7              ; |ZHUSHUI|Add0~7              ; combout          ;
+; |ZHUSHUI|ZS_CONTROLL[0]~reg0 ; |ZHUSHUI|ZS_CONTROLL[0]~reg0 ; regout           ;
+; |ZHUSHUI|ZS_CONTROLL[1]~reg0 ; |ZHUSHUI|ZS_CONTROLL[1]~reg0 ; regout           ;
+; |ZHUSHUI|ZS_CONTROLL~0       ; |ZHUSHUI|ZS_CONTROLL~0       ; combout          ;
+; |ZHUSHUI|ZS_CONTROLL~1       ; |ZHUSHUI|ZS_CONTROLL~1       ; combout          ;
+; |ZHUSHUI|COUNT[1]            ; |ZHUSHUI|COUNT[1]            ; regout           ;
+; |ZHUSHUI|COUNT[0]            ; |ZHUSHUI|COUNT[0]            ; regout           ;
+; |ZHUSHUI|Add0~6              ; |ZHUSHUI|Add0~6              ; combout          ;
+; |ZHUSHUI|Add0~12             ; |ZHUSHUI|Add0~12             ; combout          ;
+; |ZHUSHUI|Add0~94             ; |ZHUSHUI|Add0~94             ; combout          ;
+; |ZHUSHUI|Add0~95             ; |ZHUSHUI|Add0~95             ; combout          ;
+; |ZHUSHUI|ZS_CONTROLL[0]      ; |ZHUSHUI|ZS_CONTROLL[0]      ; padio            ;
+; |ZHUSHUI|ZS_CONTROLL[1]      ; |ZHUSHUI|ZS_CONTROLL[1]      ; padio            ;
+; |ZHUSHUI|ZS_START            ; |ZHUSHUI|ZS_START~corein     ; combout          ;
+; |ZHUSHUI|clk_1               ; |ZHUSHUI|clk_1~corein        ; combout          ;
+; |ZHUSHUI|FS_START            ; |ZHUSHUI|FS_START~corein     ; combout          ;
+; |ZHUSHUI|clk_1~clkctrl       ; |ZHUSHUI|clk_1~clkctrl       ; outclk           ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------+
+; Missing 1-Value Coverage                                              ;
++-----------------------+----------------------------+------------------+
+; Node Name             ; Output Port Name           ; Output Port Type ;
++-----------------------+----------------------------+------------------+
+; |ZHUSHUI|Add0~7       ; |ZHUSHUI|Add0~8            ; cout             ;
+; |ZHUSHUI|Add0~9       ; |ZHUSHUI|Add0~9            ; combout          ;
+; |ZHUSHUI|Add0~9       ; |ZHUSHUI|Add0~10           ; cout             ;
+; |ZHUSHUI|Add0~13      ; |ZHUSHUI|Add0~13           ; combout          ;
+; |ZHUSHUI|Add0~13      ; |ZHUSHUI|Add0~14           ; cout             ;
+; |ZHUSHUI|Add0~16      ; |ZHUSHUI|Add0~16           ; combout          ;
+; |ZHUSHUI|Add0~16      ; |ZHUSHUI|Add0~17           ; cout             ;
+; |ZHUSHUI|Add0~19      ; |ZHUSHUI|Add0~19           ; combout          ;
+; |ZHUSHUI|Add0~19      ; |ZHUSHUI|Add0~20           ; cout             ;
+; |ZHUSHUI|Add0~22      ; |ZHUSHUI|Add0~22           ; combout          ;
+; |ZHUSHUI|Add0~22      ; |ZHUSHUI|Add0~23           ; cout             ;
+; |ZHUSHUI|Add0~25      ; |ZHUSHUI|Add0~25           ; combout          ;
+; |ZHUSHUI|Add0~25      ; |ZHUSHUI|Add0~26           ; cout             ;
+; |ZHUSHUI|Add0~28      ; |ZHUSHUI|Add0~28           ; combout          ;
+; |ZHUSHUI|Add0~28      ; |ZHUSHUI|Add0~29           ; cout             ;
+; |ZHUSHUI|Add0~31      ; |ZHUSHUI|Add0~31           ; combout          ;
+; |ZHUSHUI|Add0~31      ; |ZHUSHUI|Add0~32           ; cout             ;
+; |ZHUSHUI|Add0~34      ; |ZHUSHUI|Add0~34           ; combout          ;
+; |ZHUSHUI|Add0~34      ; |ZHUSHUI|Add0~35           ; cout             ;
+; |ZHUSHUI|Add0~37      ; |ZHUSHUI|Add0~37           ; combout          ;
+; |ZHUSHUI|Add0~37      ; |ZHUSHUI|Add0~38           ; cout             ;
+; |ZHUSHUI|Add0~40      ; |ZHUSHUI|Add0~40           ; combout          ;
+; |ZHUSHUI|Add0~40      ; |ZHUSHUI|Add0~41           ; cout             ;
+; |ZHUSHUI|Add0~43      ; |ZHUSHUI|Add0~43           ; combout          ;
+; |ZHUSHUI|Add0~43      ; |ZHUSHUI|Add0~44           ; cout             ;
+; |ZHUSHUI|Add0~46      ; |ZHUSHUI|Add0~46           ; combout          ;
+; |ZHUSHUI|Add0~46      ; |ZHUSHUI|Add0~47           ; cout             ;
+; |ZHUSHUI|Add0~49      ; |ZHUSHUI|Add0~49           ; combout          ;
+; |ZHUSHUI|Add0~49      ; |ZHUSHUI|Add0~50           ; cout             ;
+; |ZHUSHUI|Add0~52      ; |ZHUSHUI|Add0~52           ; combout          ;
+; |ZHUSHUI|Add0~52      ; |ZHUSHUI|Add0~53           ; cout             ;
+; |ZHUSHUI|Add0~55      ; |ZHUSHUI|Add0~55           ; combout          ;
+; |ZHUSHUI|Add0~55      ; |ZHUSHUI|Add0~56           ; cout             ;
+; |ZHUSHUI|Add0~58      ; |ZHUSHUI|Add0~58           ; combout          ;
+; |ZHUSHUI|Add0~58      ; |ZHUSHUI|Add0~59           ; cout             ;
+; |ZHUSHUI|Add0~61      ; |ZHUSHUI|Add0~61           ; combout          ;
+; |ZHUSHUI|Add0~61      ; |ZHUSHUI|Add0~62           ; cout             ;
+; |ZHUSHUI|Add0~64      ; |ZHUSHUI|Add0~64           ; combout          ;
+; |ZHUSHUI|Add0~64      ; |ZHUSHUI|Add0~65           ; cout             ;
+; |ZHUSHUI|Add0~67      ; |ZHUSHUI|Add0~67           ; combout          ;
+; |ZHUSHUI|Add0~67      ; |ZHUSHUI|Add0~68           ; cout             ;
+; |ZHUSHUI|Add0~70      ; |ZHUSHUI|Add0~70           ; combout          ;
+; |ZHUSHUI|Add0~70      ; |ZHUSHUI|Add0~71           ; cout             ;
+; |ZHUSHUI|Add0~73      ; |ZHUSHUI|Add0~73           ; combout          ;
+; |ZHUSHUI|Add0~73      ; |ZHUSHUI|Add0~74           ; cout             ;
+; |ZHUSHUI|Add0~76      ; |ZHUSHUI|Add0~76           ; combout          ;
+; |ZHUSHUI|Add0~76      ; |ZHUSHUI|Add0~77           ; cout             ;
+; |ZHUSHUI|Add0~79      ; |ZHUSHUI|Add0~79           ; combout          ;
+; |ZHUSHUI|Add0~79      ; |ZHUSHUI|Add0~80           ; cout             ;
+; |ZHUSHUI|Add0~82      ; |ZHUSHUI|Add0~82           ; combout          ;
+; |ZHUSHUI|Add0~82      ; |ZHUSHUI|Add0~83           ; cout             ;
+; |ZHUSHUI|Add0~85      ; |ZHUSHUI|Add0~85           ; combout          ;
+; |ZHUSHUI|Add0~85      ; |ZHUSHUI|Add0~86           ; cout             ;
+; |ZHUSHUI|Add0~88      ; |ZHUSHUI|Add0~88           ; combout          ;
+; |ZHUSHUI|Add0~88      ; |ZHUSHUI|Add0~89           ; cout             ;
+; |ZHUSHUI|Add0~91      ; |ZHUSHUI|Add0~91           ; combout          ;
+; |ZHUSHUI|COUNT[4]     ; |ZHUSHUI|COUNT[4]          ; regout           ;
+; |ZHUSHUI|COUNT[3]     ; |ZHUSHUI|COUNT[3]          ; regout           ;
+; |ZHUSHUI|LessThan0~0  ; |ZHUSHUI|LessThan0~0       ; combout          ;
+; |ZHUSHUI|LessThan0~1  ; |ZHUSHUI|LessThan0~1       ; combout          ;
+; |ZHUSHUI|COUNT[5]     ; |ZHUSHUI|COUNT[5]          ; regout           ;
+; |ZHUSHUI|LessThan0~2  ; |ZHUSHUI|LessThan0~2       ; combout          ;
+; |ZHUSHUI|COUNT[6]     ; |ZHUSHUI|COUNT[6]          ; regout           ;
+; |ZHUSHUI|COUNT[7]     ; |ZHUSHUI|COUNT[7]          ; regout           ;
+; |ZHUSHUI|COUNT[8]     ; |ZHUSHUI|COUNT[8]          ; regout           ;
+; |ZHUSHUI|COUNT[9]     ; |ZHUSHUI|COUNT[9]          ; regout           ;
+; |ZHUSHUI|LessThan0~3  ; |ZHUSHUI|LessThan0~3       ; combout          ;
+; |ZHUSHUI|COUNT[10]    ; |ZHUSHUI|COUNT[10]         ; regout           ;
+; |ZHUSHUI|COUNT[11]    ; |ZHUSHUI|COUNT[11]         ; regout           ;
+; |ZHUSHUI|COUNT[12]    ; |ZHUSHUI|COUNT[12]         ; regout           ;
+; |ZHUSHUI|COUNT[13]    ; |ZHUSHUI|COUNT[13]         ; regout           ;
+; |ZHUSHUI|LessThan0~4  ; |ZHUSHUI|LessThan0~4       ; combout          ;
+; |ZHUSHUI|COUNT[14]    ; |ZHUSHUI|COUNT[14]         ; regout           ;
+; |ZHUSHUI|COUNT[15]    ; |ZHUSHUI|COUNT[15]         ; regout           ;
+; |ZHUSHUI|COUNT[16]    ; |ZHUSHUI|COUNT[16]         ; regout           ;
+; |ZHUSHUI|COUNT[17]    ; |ZHUSHUI|COUNT[17]         ; regout           ;
+; |ZHUSHUI|LessThan0~5  ; |ZHUSHUI|LessThan0~5       ; combout          ;
+; |ZHUSHUI|COUNT[18]    ; |ZHUSHUI|COUNT[18]         ; regout           ;
+; |ZHUSHUI|COUNT[19]    ; |ZHUSHUI|COUNT[19]         ; regout           ;
+; |ZHUSHUI|COUNT[20]    ; |ZHUSHUI|COUNT[20]         ; regout           ;
+; |ZHUSHUI|COUNT[21]    ; |ZHUSHUI|COUNT[21]         ; regout           ;
+; |ZHUSHUI|LessThan0~6  ; |ZHUSHUI|LessThan0~6       ; combout          ;
+; |ZHUSHUI|LessThan0~7  ; |ZHUSHUI|LessThan0~7       ; combout          ;
+; |ZHUSHUI|COUNT[22]    ; |ZHUSHUI|COUNT[22]         ; regout           ;
+; |ZHUSHUI|COUNT[23]    ; |ZHUSHUI|COUNT[23]         ; regout           ;
+; |ZHUSHUI|COUNT[24]    ; |ZHUSHUI|COUNT[24]         ; regout           ;
+; |ZHUSHUI|COUNT[25]    ; |ZHUSHUI|COUNT[25]         ; regout           ;
+; |ZHUSHUI|LessThan0~8  ; |ZHUSHUI|LessThan0~8       ; combout          ;
+; |ZHUSHUI|COUNT[26]    ; |ZHUSHUI|COUNT[26]         ; regout           ;
+; |ZHUSHUI|COUNT[27]    ; |ZHUSHUI|COUNT[27]         ; regout           ;
+; |ZHUSHUI|COUNT[28]    ; |ZHUSHUI|COUNT[28]         ; regout           ;
+; |ZHUSHUI|COUNT[29]    ; |ZHUSHUI|COUNT[29]         ; regout           ;
+; |ZHUSHUI|LessThan0~9  ; |ZHUSHUI|LessThan0~9       ; combout          ;
+; |ZHUSHUI|COUNT[30]    ; |ZHUSHUI|COUNT[30]         ; regout           ;
+; |ZHUSHUI|LessThan0~10 ; |ZHUSHUI|LessThan0~10      ; combout          ;
+; |ZHUSHUI|COUNT[31]    ; |ZHUSHUI|COUNT[31]         ; regout           ;
+; |ZHUSHUI|LessThan0~11 ; |ZHUSHUI|LessThan0~11      ; combout          ;
+; |ZHUSHUI|Add0~11      ; |ZHUSHUI|Add0~11           ; combout          ;
+; |ZHUSHUI|Add0~15      ; |ZHUSHUI|Add0~15           ; combout          ;
+; |ZHUSHUI|Add0~18      ; |ZHUSHUI|Add0~18           ; combout          ;
+; |ZHUSHUI|Add0~21      ; |ZHUSHUI|Add0~21           ; combout          ;
+; |ZHUSHUI|Add0~24      ; |ZHUSHUI|Add0~24           ; combout          ;
+; |ZHUSHUI|Add0~27      ; |ZHUSHUI|Add0~27           ; combout          ;
+; |ZHUSHUI|Add0~30      ; |ZHUSHUI|Add0~30           ; combout          ;
+; |ZHUSHUI|Add0~33      ; |ZHUSHUI|Add0~33           ; combout          ;
+; |ZHUSHUI|Add0~36      ; |ZHUSHUI|Add0~36           ; combout          ;
+; |ZHUSHUI|Add0~39      ; |ZHUSHUI|Add0~39           ; combout          ;
+; |ZHUSHUI|Add0~42      ; |ZHUSHUI|Add0~42           ; combout          ;
+; |ZHUSHUI|Add0~45      ; |ZHUSHUI|Add0~45           ; combout          ;
+; |ZHUSHUI|Add0~48      ; |ZHUSHUI|Add0~48           ; combout          ;
+; |ZHUSHUI|Add0~51      ; |ZHUSHUI|Add0~51           ; combout          ;
+; |ZHUSHUI|Add0~54      ; |ZHUSHUI|Add0~54           ; combout          ;
+; |ZHUSHUI|Add0~57      ; |ZHUSHUI|Add0~57           ; combout          ;
+; |ZHUSHUI|Add0~60      ; |ZHUSHUI|Add0~60           ; combout          ;
+; |ZHUSHUI|Add0~63      ; |ZHUSHUI|Add0~63           ; combout          ;
+; |ZHUSHUI|Add0~66      ; |ZHUSHUI|Add0~66           ; combout          ;
+; |ZHUSHUI|Add0~69      ; |ZHUSHUI|Add0~69           ; combout          ;
+; |ZHUSHUI|Add0~72      ; |ZHUSHUI|Add0~72           ; combout          ;
+; |ZHUSHUI|Add0~75      ; |ZHUSHUI|Add0~75           ; combout          ;
+; |ZHUSHUI|Add0~78      ; |ZHUSHUI|Add0~78           ; combout          ;
+; |ZHUSHUI|Add0~81      ; |ZHUSHUI|Add0~81           ; combout          ;
+; |ZHUSHUI|Add0~84      ; |ZHUSHUI|Add0~84           ; combout          ;
+; |ZHUSHUI|Add0~87      ; |ZHUSHUI|Add0~87           ; combout          ;
+; |ZHUSHUI|Add0~90      ; |ZHUSHUI|Add0~90           ; combout          ;
+; |ZHUSHUI|Add0~93      ; |ZHUSHUI|Add0~93           ; combout          ;
+; |ZHUSHUI|SW_MODE[1]   ; |ZHUSHUI|SW_MODE[1]~corein ; combout          ;
+; |ZHUSHUI|SW_MODE[0]   ; |ZHUSHUI|SW_MODE[0]~corein ; combout          ;
++-----------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------+
+; Missing 0-Value Coverage                                              ;
++-----------------------+----------------------------+------------------+
+; Node Name             ; Output Port Name           ; Output Port Type ;
++-----------------------+----------------------------+------------------+
+; |ZHUSHUI|Add0~7       ; |ZHUSHUI|Add0~8            ; cout             ;
+; |ZHUSHUI|Add0~9       ; |ZHUSHUI|Add0~9            ; combout          ;
+; |ZHUSHUI|Add0~9       ; |ZHUSHUI|Add0~10           ; cout             ;
+; |ZHUSHUI|Add0~13      ; |ZHUSHUI|Add0~13           ; combout          ;
+; |ZHUSHUI|Add0~13      ; |ZHUSHUI|Add0~14           ; cout             ;
+; |ZHUSHUI|Add0~16      ; |ZHUSHUI|Add0~16           ; combout          ;
+; |ZHUSHUI|Add0~16      ; |ZHUSHUI|Add0~17           ; cout             ;
+; |ZHUSHUI|Add0~19      ; |ZHUSHUI|Add0~19           ; combout          ;
+; |ZHUSHUI|Add0~19      ; |ZHUSHUI|Add0~20           ; cout             ;
+; |ZHUSHUI|Add0~22      ; |ZHUSHUI|Add0~22           ; combout          ;
+; |ZHUSHUI|Add0~22      ; |ZHUSHUI|Add0~23           ; cout             ;
+; |ZHUSHUI|Add0~25      ; |ZHUSHUI|Add0~25           ; combout          ;
+; |ZHUSHUI|Add0~25      ; |ZHUSHUI|Add0~26           ; cout             ;
+; |ZHUSHUI|Add0~28      ; |ZHUSHUI|Add0~28           ; combout          ;
+; |ZHUSHUI|Add0~28      ; |ZHUSHUI|Add0~29           ; cout             ;
+; |ZHUSHUI|Add0~31      ; |ZHUSHUI|Add0~31           ; combout          ;
+; |ZHUSHUI|Add0~31      ; |ZHUSHUI|Add0~32           ; cout             ;
+; |ZHUSHUI|Add0~34      ; |ZHUSHUI|Add0~34           ; combout          ;
+; |ZHUSHUI|Add0~34      ; |ZHUSHUI|Add0~35           ; cout             ;
+; |ZHUSHUI|Add0~37      ; |ZHUSHUI|Add0~37           ; combout          ;
+; |ZHUSHUI|Add0~37      ; |ZHUSHUI|Add0~38           ; cout             ;
+; |ZHUSHUI|Add0~40      ; |ZHUSHUI|Add0~40           ; combout          ;
+; |ZHUSHUI|Add0~40      ; |ZHUSHUI|Add0~41           ; cout             ;
+; |ZHUSHUI|Add0~43      ; |ZHUSHUI|Add0~43           ; combout          ;
+; |ZHUSHUI|Add0~43      ; |ZHUSHUI|Add0~44           ; cout             ;
+; |ZHUSHUI|Add0~46      ; |ZHUSHUI|Add0~46           ; combout          ;
+; |ZHUSHUI|Add0~46      ; |ZHUSHUI|Add0~47           ; cout             ;
+; |ZHUSHUI|Add0~49      ; |ZHUSHUI|Add0~49           ; combout          ;
+; |ZHUSHUI|Add0~49      ; |ZHUSHUI|Add0~50           ; cout             ;
+; |ZHUSHUI|Add0~52      ; |ZHUSHUI|Add0~52           ; combout          ;
+; |ZHUSHUI|Add0~52      ; |ZHUSHUI|Add0~53           ; cout             ;
+; |ZHUSHUI|Add0~55      ; |ZHUSHUI|Add0~55           ; combout          ;
+; |ZHUSHUI|Add0~55      ; |ZHUSHUI|Add0~56           ; cout             ;
+; |ZHUSHUI|Add0~58      ; |ZHUSHUI|Add0~58           ; combout          ;
+; |ZHUSHUI|Add0~58      ; |ZHUSHUI|Add0~59           ; cout             ;
+; |ZHUSHUI|Add0~61      ; |ZHUSHUI|Add0~61           ; combout          ;
+; |ZHUSHUI|Add0~61      ; |ZHUSHUI|Add0~62           ; cout             ;
+; |ZHUSHUI|Add0~64      ; |ZHUSHUI|Add0~64           ; combout          ;
+; |ZHUSHUI|Add0~64      ; |ZHUSHUI|Add0~65           ; cout             ;
+; |ZHUSHUI|Add0~67      ; |ZHUSHUI|Add0~67           ; combout          ;
+; |ZHUSHUI|Add0~67      ; |ZHUSHUI|Add0~68           ; cout             ;
+; |ZHUSHUI|Add0~70      ; |ZHUSHUI|Add0~70           ; combout          ;
+; |ZHUSHUI|Add0~70      ; |ZHUSHUI|Add0~71           ; cout             ;
+; |ZHUSHUI|Add0~73      ; |ZHUSHUI|Add0~73           ; combout          ;
+; |ZHUSHUI|Add0~73      ; |ZHUSHUI|Add0~74           ; cout             ;
+; |ZHUSHUI|Add0~76      ; |ZHUSHUI|Add0~76           ; combout          ;
+; |ZHUSHUI|Add0~76      ; |ZHUSHUI|Add0~77           ; cout             ;
+; |ZHUSHUI|Add0~79      ; |ZHUSHUI|Add0~79           ; combout          ;
+; |ZHUSHUI|Add0~79      ; |ZHUSHUI|Add0~80           ; cout             ;
+; |ZHUSHUI|Add0~82      ; |ZHUSHUI|Add0~82           ; combout          ;
+; |ZHUSHUI|Add0~82      ; |ZHUSHUI|Add0~83           ; cout             ;
+; |ZHUSHUI|Add0~85      ; |ZHUSHUI|Add0~85           ; combout          ;
+; |ZHUSHUI|Add0~85      ; |ZHUSHUI|Add0~86           ; cout             ;
+; |ZHUSHUI|Add0~88      ; |ZHUSHUI|Add0~88           ; combout          ;
+; |ZHUSHUI|Add0~88      ; |ZHUSHUI|Add0~89           ; cout             ;
+; |ZHUSHUI|Add0~91      ; |ZHUSHUI|Add0~91           ; combout          ;
+; |ZHUSHUI|COUNT[2]     ; |ZHUSHUI|COUNT[2]          ; regout           ;
+; |ZHUSHUI|COUNT[4]     ; |ZHUSHUI|COUNT[4]          ; regout           ;
+; |ZHUSHUI|COUNT[3]     ; |ZHUSHUI|COUNT[3]          ; regout           ;
+; |ZHUSHUI|LessThan0~0  ; |ZHUSHUI|LessThan0~0       ; combout          ;
+; |ZHUSHUI|LessThan0~1  ; |ZHUSHUI|LessThan0~1       ; combout          ;
+; |ZHUSHUI|COUNT[5]     ; |ZHUSHUI|COUNT[5]          ; regout           ;
+; |ZHUSHUI|LessThan0~2  ; |ZHUSHUI|LessThan0~2       ; combout          ;
+; |ZHUSHUI|COUNT[6]     ; |ZHUSHUI|COUNT[6]          ; regout           ;
+; |ZHUSHUI|COUNT[7]     ; |ZHUSHUI|COUNT[7]          ; regout           ;
+; |ZHUSHUI|COUNT[8]     ; |ZHUSHUI|COUNT[8]          ; regout           ;
+; |ZHUSHUI|COUNT[9]     ; |ZHUSHUI|COUNT[9]          ; regout           ;
+; |ZHUSHUI|LessThan0~3  ; |ZHUSHUI|LessThan0~3       ; combout          ;
+; |ZHUSHUI|COUNT[10]    ; |ZHUSHUI|COUNT[10]         ; regout           ;
+; |ZHUSHUI|COUNT[11]    ; |ZHUSHUI|COUNT[11]         ; regout           ;
+; |ZHUSHUI|COUNT[12]    ; |ZHUSHUI|COUNT[12]         ; regout           ;
+; |ZHUSHUI|COUNT[13]    ; |ZHUSHUI|COUNT[13]         ; regout           ;
+; |ZHUSHUI|LessThan0~4  ; |ZHUSHUI|LessThan0~4       ; combout          ;
+; |ZHUSHUI|COUNT[14]    ; |ZHUSHUI|COUNT[14]         ; regout           ;
+; |ZHUSHUI|COUNT[15]    ; |ZHUSHUI|COUNT[15]         ; regout           ;
+; |ZHUSHUI|COUNT[16]    ; |ZHUSHUI|COUNT[16]         ; regout           ;
+; |ZHUSHUI|COUNT[17]    ; |ZHUSHUI|COUNT[17]         ; regout           ;
+; |ZHUSHUI|LessThan0~5  ; |ZHUSHUI|LessThan0~5       ; combout          ;
+; |ZHUSHUI|COUNT[18]    ; |ZHUSHUI|COUNT[18]         ; regout           ;
+; |ZHUSHUI|COUNT[19]    ; |ZHUSHUI|COUNT[19]         ; regout           ;
+; |ZHUSHUI|COUNT[20]    ; |ZHUSHUI|COUNT[20]         ; regout           ;
+; |ZHUSHUI|COUNT[21]    ; |ZHUSHUI|COUNT[21]         ; regout           ;
+; |ZHUSHUI|LessThan0~6  ; |ZHUSHUI|LessThan0~6       ; combout          ;
+; |ZHUSHUI|LessThan0~7  ; |ZHUSHUI|LessThan0~7       ; combout          ;
+; |ZHUSHUI|COUNT[22]    ; |ZHUSHUI|COUNT[22]         ; regout           ;
+; |ZHUSHUI|COUNT[23]    ; |ZHUSHUI|COUNT[23]         ; regout           ;
+; |ZHUSHUI|COUNT[24]    ; |ZHUSHUI|COUNT[24]         ; regout           ;
+; |ZHUSHUI|COUNT[25]    ; |ZHUSHUI|COUNT[25]         ; regout           ;
+; |ZHUSHUI|LessThan0~8  ; |ZHUSHUI|LessThan0~8       ; combout          ;
+; |ZHUSHUI|COUNT[26]    ; |ZHUSHUI|COUNT[26]         ; regout           ;
+; |ZHUSHUI|COUNT[27]    ; |ZHUSHUI|COUNT[27]         ; regout           ;
+; |ZHUSHUI|COUNT[28]    ; |ZHUSHUI|COUNT[28]         ; regout           ;
+; |ZHUSHUI|COUNT[29]    ; |ZHUSHUI|COUNT[29]         ; regout           ;
+; |ZHUSHUI|LessThan0~9  ; |ZHUSHUI|LessThan0~9       ; combout          ;
+; |ZHUSHUI|COUNT[30]    ; |ZHUSHUI|COUNT[30]         ; regout           ;
+; |ZHUSHUI|LessThan0~10 ; |ZHUSHUI|LessThan0~10      ; combout          ;
+; |ZHUSHUI|COUNT[31]    ; |ZHUSHUI|COUNT[31]         ; regout           ;
+; |ZHUSHUI|LessThan0~11 ; |ZHUSHUI|LessThan0~11      ; combout          ;
+; |ZHUSHUI|Add0~11      ; |ZHUSHUI|Add0~11           ; combout          ;
+; |ZHUSHUI|Add0~15      ; |ZHUSHUI|Add0~15           ; combout          ;
+; |ZHUSHUI|Add0~18      ; |ZHUSHUI|Add0~18           ; combout          ;
+; |ZHUSHUI|Add0~21      ; |ZHUSHUI|Add0~21           ; combout          ;
+; |ZHUSHUI|Add0~24      ; |ZHUSHUI|Add0~24           ; combout          ;
+; |ZHUSHUI|Add0~27      ; |ZHUSHUI|Add0~27           ; combout          ;
+; |ZHUSHUI|Add0~30      ; |ZHUSHUI|Add0~30           ; combout          ;
+; |ZHUSHUI|Add0~33      ; |ZHUSHUI|Add0~33           ; combout          ;
+; |ZHUSHUI|Add0~36      ; |ZHUSHUI|Add0~36           ; combout          ;
+; |ZHUSHUI|Add0~39      ; |ZHUSHUI|Add0~39           ; combout          ;
+; |ZHUSHUI|Add0~42      ; |ZHUSHUI|Add0~42           ; combout          ;
+; |ZHUSHUI|Add0~45      ; |ZHUSHUI|Add0~45           ; combout          ;
+; |ZHUSHUI|Add0~48      ; |ZHUSHUI|Add0~48           ; combout          ;
+; |ZHUSHUI|Add0~51      ; |ZHUSHUI|Add0~51           ; combout          ;
+; |ZHUSHUI|Add0~54      ; |ZHUSHUI|Add0~54           ; combout          ;
+; |ZHUSHUI|Add0~57      ; |ZHUSHUI|Add0~57           ; combout          ;
+; |ZHUSHUI|Add0~60      ; |ZHUSHUI|Add0~60           ; combout          ;
+; |ZHUSHUI|Add0~63      ; |ZHUSHUI|Add0~63           ; combout          ;
+; |ZHUSHUI|Add0~66      ; |ZHUSHUI|Add0~66           ; combout          ;
+; |ZHUSHUI|Add0~69      ; |ZHUSHUI|Add0~69           ; combout          ;
+; |ZHUSHUI|Add0~72      ; |ZHUSHUI|Add0~72           ; combout          ;
+; |ZHUSHUI|Add0~75      ; |ZHUSHUI|Add0~75           ; combout          ;
+; |ZHUSHUI|Add0~78      ; |ZHUSHUI|Add0~78           ; combout          ;
+; |ZHUSHUI|Add0~81      ; |ZHUSHUI|Add0~81           ; combout          ;
+; |ZHUSHUI|Add0~84      ; |ZHUSHUI|Add0~84           ; combout          ;
+; |ZHUSHUI|Add0~87      ; |ZHUSHUI|Add0~87           ; combout          ;
+; |ZHUSHUI|Add0~90      ; |ZHUSHUI|Add0~90           ; combout          ;
+; |ZHUSHUI|Add0~93      ; |ZHUSHUI|Add0~93           ; combout          ;
+; |ZHUSHUI|SW_MODE[1]   ; |ZHUSHUI|SW_MODE[1]~corein ; combout          ;
+; |ZHUSHUI|SW_MODE[0]   ; |ZHUSHUI|SW_MODE[0]~corein ; combout          ;
++-----------------------+----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Wed Jan 07 09:16:24 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off ZhuShui -c ZhuShui
+Info: Using vector source file "I:/MyProject/ZhuShui/ZhuShui.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |ZHUSHUI|COUNT[31]
+    Info: Register: |ZHUSHUI|COUNT[0]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      15.23 %
+Info: Number of transitions in simulation is 486
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 190 megabytes
+    Info: Processing ended: Wed Jan 07 09:16:24 2015
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

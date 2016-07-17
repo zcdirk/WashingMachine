@@ -1,0 +1,564 @@
+Simulator report for FangDou
+Tue Jan 06 23:31:02 2015
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 208 nodes    ;
+; Simulation Coverage         ;      10.58 % ;
+; Total Number of Transitions ; 572          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                             ;
++--------------------------------------------------------------------------------------------+-----------------------------------+---------------+
+; Option                                                                                     ; Setting                           ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                        ; Timing        ;
+; Start time                                                                                 ; 0 ns                              ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                              ;               ;
+; Vector input source                                                                        ; I:/MyProject/FangDou/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                ; On            ;
+; Check outputs                                                                              ; Off                               ; Off           ;
+; Report simulation coverage                                                                 ; On                                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                ; On            ;
+; Detect setup and hold time violations                                                      ; Off                               ; Off           ;
+; Detect glitches                                                                            ; Off                               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                               ; Off           ;
+; Generate Signal Activity File                                                              ; Off                               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                               ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                              ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      10.58 % ;
+; Total nodes checked                                 ; 208          ;
+; Total output ports checked                          ; 208          ;
+; Total output ports with complete 1/0-value coverage ; 22           ;
+; Total output ports with no 1/0-value coverage       ; 184          ;
+; Total output ports with no 1-value coverage         ; 184          ;
+; Total output ports with no 0-value coverage         ; 186          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------+
+; Complete 1/0-Value Coverage                              ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |FangDou|P5~0     ; |FangDou|P5~0     ; out0             ;
+; |FangDou|TEMP5~0  ; |FangDou|TEMP5~0  ; out              ;
+; |FangDou|TEMP5~1  ; |FangDou|TEMP5~1  ; out              ;
+; |FangDou|TEMP5~2  ; |FangDou|TEMP5~2  ; out              ;
+; |FangDou|TEMP5~3  ; |FangDou|TEMP5~3  ; out              ;
+; |FangDou|TEMP5~4  ; |FangDou|TEMP5~4  ; out              ;
+; |FangDou|TEMP5~5  ; |FangDou|TEMP5~5  ; out              ;
+; |FangDou|TEMP5~6  ; |FangDou|TEMP5~6  ; out              ;
+; |FangDou|TEMP5~7  ; |FangDou|TEMP5~7  ; out              ;
+; |FangDou|DATA5    ; |FangDou|DATA5    ; regout           ;
+; |FangDou|TEMP5[0] ; |FangDou|TEMP5[0] ; regout           ;
+; |FangDou|TEMP5[1] ; |FangDou|TEMP5[1] ; regout           ;
+; |FangDou|TEMP5[2] ; |FangDou|TEMP5[2] ; regout           ;
+; |FangDou|TEMP5[3] ; |FangDou|TEMP5[3] ; regout           ;
+; |FangDou|clk_100  ; |FangDou|clk_100  ; out              ;
+; |FangDou|DOWN_IN  ; |FangDou|DOWN_IN  ; out              ;
+; |FangDou|Add4~0   ; |FangDou|Add4~0   ; out0             ;
+; |FangDou|Add4~1   ; |FangDou|Add4~1   ; out0             ;
+; |FangDou|Add4~2   ; |FangDou|Add4~2   ; out0             ;
+; |FangDou|Add4~3   ; |FangDou|Add4~3   ; out0             ;
+; |FangDou|Add4~4   ; |FangDou|Add4~4   ; out0             ;
+; |FangDou|Equal4~0 ; |FangDou|Equal4~0 ; out0             ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------+
+; Missing 1-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |FangDou|P1~0     ; |FangDou|P1~0     ; out0             ;
+; |FangDou|TEMP1~0  ; |FangDou|TEMP1~0  ; out              ;
+; |FangDou|TEMP1~1  ; |FangDou|TEMP1~1  ; out              ;
+; |FangDou|TEMP1~2  ; |FangDou|TEMP1~2  ; out              ;
+; |FangDou|TEMP1~3  ; |FangDou|TEMP1~3  ; out              ;
+; |FangDou|DATA8    ; |FangDou|DATA8    ; regout           ;
+; |FangDou|TEMP1~4  ; |FangDou|TEMP1~4  ; out              ;
+; |FangDou|TEMP1~5  ; |FangDou|TEMP1~5  ; out              ;
+; |FangDou|TEMP1~6  ; |FangDou|TEMP1~6  ; out              ;
+; |FangDou|TEMP1~7  ; |FangDou|TEMP1~7  ; out              ;
+; |FangDou|P2~0     ; |FangDou|P2~0     ; out0             ;
+; |FangDou|TEMP2~0  ; |FangDou|TEMP2~0  ; out              ;
+; |FangDou|TEMP2~1  ; |FangDou|TEMP2~1  ; out              ;
+; |FangDou|TEMP2~2  ; |FangDou|TEMP2~2  ; out              ;
+; |FangDou|TEMP2~3  ; |FangDou|TEMP2~3  ; out              ;
+; |FangDou|TEMP2~4  ; |FangDou|TEMP2~4  ; out              ;
+; |FangDou|TEMP2~5  ; |FangDou|TEMP2~5  ; out              ;
+; |FangDou|TEMP2~6  ; |FangDou|TEMP2~6  ; out              ;
+; |FangDou|TEMP2~7  ; |FangDou|TEMP2~7  ; out              ;
+; |FangDou|DATA1    ; |FangDou|DATA1    ; regout           ;
+; |FangDou|P3~0     ; |FangDou|P3~0     ; out0             ;
+; |FangDou|TEMP3~0  ; |FangDou|TEMP3~0  ; out              ;
+; |FangDou|TEMP3~1  ; |FangDou|TEMP3~1  ; out              ;
+; |FangDou|TEMP3~2  ; |FangDou|TEMP3~2  ; out              ;
+; |FangDou|TEMP3~3  ; |FangDou|TEMP3~3  ; out              ;
+; |FangDou|TEMP9[3] ; |FangDou|TEMP9[3] ; regout           ;
+; |FangDou|TEMP9[2] ; |FangDou|TEMP9[2] ; regout           ;
+; |FangDou|TEMP3~4  ; |FangDou|TEMP3~4  ; out              ;
+; |FangDou|TEMP3~5  ; |FangDou|TEMP3~5  ; out              ;
+; |FangDou|TEMP3~6  ; |FangDou|TEMP3~6  ; out              ;
+; |FangDou|TEMP3~7  ; |FangDou|TEMP3~7  ; out              ;
+; |FangDou|SW~reg0  ; |FangDou|SW~reg0  ; regout           ;
+; |FangDou|P4~0     ; |FangDou|P4~0     ; out0             ;
+; |FangDou|TEMP4~0  ; |FangDou|TEMP4~0  ; out              ;
+; |FangDou|TEMP4~1  ; |FangDou|TEMP4~1  ; out              ;
+; |FangDou|TEMP4~2  ; |FangDou|TEMP4~2  ; out              ;
+; |FangDou|TEMP4~3  ; |FangDou|TEMP4~3  ; out              ;
+; |FangDou|TEMP9[1] ; |FangDou|TEMP9[1] ; regout           ;
+; |FangDou|TEMP9[0] ; |FangDou|TEMP9[0] ; regout           ;
+; |FangDou|TEMP4~4  ; |FangDou|TEMP4~4  ; out              ;
+; |FangDou|TEMP4~5  ; |FangDou|TEMP4~5  ; out              ;
+; |FangDou|TEMP4~6  ; |FangDou|TEMP4~6  ; out              ;
+; |FangDou|TEMP4~7  ; |FangDou|TEMP4~7  ; out              ;
+; |FangDou|YY~reg0  ; |FangDou|YY~reg0  ; regout           ;
+; |FangDou|UP~reg0  ; |FangDou|UP~reg0  ; regout           ;
+; |FangDou|P6~0     ; |FangDou|P6~0     ; out0             ;
+; |FangDou|TEMP6~0  ; |FangDou|TEMP6~0  ; out              ;
+; |FangDou|TEMP6~1  ; |FangDou|TEMP6~1  ; out              ;
+; |FangDou|TEMP6~2  ; |FangDou|TEMP6~2  ; out              ;
+; |FangDou|TEMP6~3  ; |FangDou|TEMP6~3  ; out              ;
+; |FangDou|DATA9    ; |FangDou|DATA9    ; regout           ;
+; |FangDou|TEMP6~4  ; |FangDou|TEMP6~4  ; out              ;
+; |FangDou|TEMP6~5  ; |FangDou|TEMP6~5  ; out              ;
+; |FangDou|TEMP6~6  ; |FangDou|TEMP6~6  ; out              ;
+; |FangDou|TEMP6~7  ; |FangDou|TEMP6~7  ; out              ;
+; |FangDou|P7~0     ; |FangDou|P7~0     ; out0             ;
+; |FangDou|TEMP7~0  ; |FangDou|TEMP7~0  ; out              ;
+; |FangDou|TEMP7~1  ; |FangDou|TEMP7~1  ; out              ;
+; |FangDou|TEMP7~2  ; |FangDou|TEMP7~2  ; out              ;
+; |FangDou|TEMP7~3  ; |FangDou|TEMP7~3  ; out              ;
+; |FangDou|TEMP7~4  ; |FangDou|TEMP7~4  ; out              ;
+; |FangDou|TEMP7~5  ; |FangDou|TEMP7~5  ; out              ;
+; |FangDou|TEMP7~6  ; |FangDou|TEMP7~6  ; out              ;
+; |FangDou|TEMP7~7  ; |FangDou|TEMP7~7  ; out              ;
+; |FangDou|MS~reg0  ; |FangDou|MS~reg0  ; regout           ;
+; |FangDou|P8~0     ; |FangDou|P8~0     ; out0             ;
+; |FangDou|TEMP8~0  ; |FangDou|TEMP8~0  ; out              ;
+; |FangDou|TEMP8~1  ; |FangDou|TEMP8~1  ; out              ;
+; |FangDou|TEMP8~2  ; |FangDou|TEMP8~2  ; out              ;
+; |FangDou|TEMP8~3  ; |FangDou|TEMP8~3  ; out              ;
+; |FangDou|RST~reg0 ; |FangDou|RST~reg0 ; regout           ;
+; |FangDou|TEMP8~4  ; |FangDou|TEMP8~4  ; out              ;
+; |FangDou|TEMP8~5  ; |FangDou|TEMP8~5  ; out              ;
+; |FangDou|TEMP8~6  ; |FangDou|TEMP8~6  ; out              ;
+; |FangDou|TEMP8~7  ; |FangDou|TEMP8~7  ; out              ;
+; |FangDou|DY~reg0  ; |FangDou|DY~reg0  ; regout           ;
+; |FangDou|P9~0     ; |FangDou|P9~0     ; out0             ;
+; |FangDou|TEMP9~0  ; |FangDou|TEMP9~0  ; out              ;
+; |FangDou|TEMP9~1  ; |FangDou|TEMP9~1  ; out              ;
+; |FangDou|TEMP9~2  ; |FangDou|TEMP9~2  ; out              ;
+; |FangDou|TEMP9~3  ; |FangDou|TEMP9~3  ; out              ;
+; |FangDou|TEMP9~4  ; |FangDou|TEMP9~4  ; out              ;
+; |FangDou|TEMP9~5  ; |FangDou|TEMP9~5  ; out              ;
+; |FangDou|TEMP9~6  ; |FangDou|TEMP9~6  ; out              ;
+; |FangDou|TEMP9~7  ; |FangDou|TEMP9~7  ; out              ;
+; |FangDou|QT~reg0  ; |FangDou|QT~reg0  ; regout           ;
+; |FangDou|TEMP8[0] ; |FangDou|TEMP8[0] ; regout           ;
+; |FangDou|TEMP8[1] ; |FangDou|TEMP8[1] ; regout           ;
+; |FangDou|TEMP8[2] ; |FangDou|TEMP8[2] ; regout           ;
+; |FangDou|TEMP8[3] ; |FangDou|TEMP8[3] ; regout           ;
+; |FangDou|DATA7    ; |FangDou|DATA7    ; regout           ;
+; |FangDou|TEMP7[0] ; |FangDou|TEMP7[0] ; regout           ;
+; |FangDou|TEMP7[1] ; |FangDou|TEMP7[1] ; regout           ;
+; |FangDou|TEMP7[2] ; |FangDou|TEMP7[2] ; regout           ;
+; |FangDou|TEMP7[3] ; |FangDou|TEMP7[3] ; regout           ;
+; |FangDou|DATA6    ; |FangDou|DATA6    ; regout           ;
+; |FangDou|TEMP6[0] ; |FangDou|TEMP6[0] ; regout           ;
+; |FangDou|TEMP6[1] ; |FangDou|TEMP6[1] ; regout           ;
+; |FangDou|TEMP6[2] ; |FangDou|TEMP6[2] ; regout           ;
+; |FangDou|TEMP6[3] ; |FangDou|TEMP6[3] ; regout           ;
+; |FangDou|DATA4    ; |FangDou|DATA4    ; regout           ;
+; |FangDou|TEMP4[0] ; |FangDou|TEMP4[0] ; regout           ;
+; |FangDou|TEMP4[1] ; |FangDou|TEMP4[1] ; regout           ;
+; |FangDou|TEMP4[2] ; |FangDou|TEMP4[2] ; regout           ;
+; |FangDou|TEMP4[3] ; |FangDou|TEMP4[3] ; regout           ;
+; |FangDou|DATA3    ; |FangDou|DATA3    ; regout           ;
+; |FangDou|TEMP3[0] ; |FangDou|TEMP3[0] ; regout           ;
+; |FangDou|TEMP3[1] ; |FangDou|TEMP3[1] ; regout           ;
+; |FangDou|TEMP3[2] ; |FangDou|TEMP3[2] ; regout           ;
+; |FangDou|TEMP3[3] ; |FangDou|TEMP3[3] ; regout           ;
+; |FangDou|DATA2    ; |FangDou|DATA2    ; regout           ;
+; |FangDou|TEMP2[0] ; |FangDou|TEMP2[0] ; regout           ;
+; |FangDou|TEMP2[1] ; |FangDou|TEMP2[1] ; regout           ;
+; |FangDou|TEMP2[2] ; |FangDou|TEMP2[2] ; regout           ;
+; |FangDou|TEMP2[3] ; |FangDou|TEMP2[3] ; regout           ;
+; |FangDou|GC~reg0  ; |FangDou|GC~reg0  ; regout           ;
+; |FangDou|TEMP1[0] ; |FangDou|TEMP1[0] ; regout           ;
+; |FangDou|TEMP1[1] ; |FangDou|TEMP1[1] ; regout           ;
+; |FangDou|TEMP1[2] ; |FangDou|TEMP1[2] ; regout           ;
+; |FangDou|TEMP1[3] ; |FangDou|TEMP1[3] ; regout           ;
+; |FangDou|GC_IN    ; |FangDou|GC_IN    ; out              ;
+; |FangDou|SW_IN    ; |FangDou|SW_IN    ; out              ;
+; |FangDou|YY_IN    ; |FangDou|YY_IN    ; out              ;
+; |FangDou|UP_IN    ; |FangDou|UP_IN    ; out              ;
+; |FangDou|MS_IN    ; |FangDou|MS_IN    ; out              ;
+; |FangDou|DY_IN    ; |FangDou|DY_IN    ; out              ;
+; |FangDou|QT_IN    ; |FangDou|QT_IN    ; out              ;
+; |FangDou|RST_IN   ; |FangDou|RST_IN   ; out              ;
+; |FangDou|GC       ; |FangDou|GC       ; pin_out          ;
+; |FangDou|SW       ; |FangDou|SW       ; pin_out          ;
+; |FangDou|YY       ; |FangDou|YY       ; pin_out          ;
+; |FangDou|UP       ; |FangDou|UP       ; pin_out          ;
+; |FangDou|MS       ; |FangDou|MS       ; pin_out          ;
+; |FangDou|DY       ; |FangDou|DY       ; pin_out          ;
+; |FangDou|QT       ; |FangDou|QT       ; pin_out          ;
+; |FangDou|RST      ; |FangDou|RST      ; pin_out          ;
+; |FangDou|Add0~0   ; |FangDou|Add0~0   ; out0             ;
+; |FangDou|Add0~1   ; |FangDou|Add0~1   ; out0             ;
+; |FangDou|Add0~2   ; |FangDou|Add0~2   ; out0             ;
+; |FangDou|Add0~3   ; |FangDou|Add0~3   ; out0             ;
+; |FangDou|Add0~4   ; |FangDou|Add0~4   ; out0             ;
+; |FangDou|Add1~0   ; |FangDou|Add1~0   ; out0             ;
+; |FangDou|Add1~1   ; |FangDou|Add1~1   ; out0             ;
+; |FangDou|Add1~2   ; |FangDou|Add1~2   ; out0             ;
+; |FangDou|Add1~3   ; |FangDou|Add1~3   ; out0             ;
+; |FangDou|Add1~4   ; |FangDou|Add1~4   ; out0             ;
+; |FangDou|Add2~0   ; |FangDou|Add2~0   ; out0             ;
+; |FangDou|Add2~1   ; |FangDou|Add2~1   ; out0             ;
+; |FangDou|Add2~2   ; |FangDou|Add2~2   ; out0             ;
+; |FangDou|Add2~3   ; |FangDou|Add2~3   ; out0             ;
+; |FangDou|Add2~4   ; |FangDou|Add2~4   ; out0             ;
+; |FangDou|Add3~0   ; |FangDou|Add3~0   ; out0             ;
+; |FangDou|Add3~1   ; |FangDou|Add3~1   ; out0             ;
+; |FangDou|Add3~2   ; |FangDou|Add3~2   ; out0             ;
+; |FangDou|Add3~3   ; |FangDou|Add3~3   ; out0             ;
+; |FangDou|Add3~4   ; |FangDou|Add3~4   ; out0             ;
+; |FangDou|Add5~0   ; |FangDou|Add5~0   ; out0             ;
+; |FangDou|Add5~1   ; |FangDou|Add5~1   ; out0             ;
+; |FangDou|Add5~2   ; |FangDou|Add5~2   ; out0             ;
+; |FangDou|Add5~3   ; |FangDou|Add5~3   ; out0             ;
+; |FangDou|Add5~4   ; |FangDou|Add5~4   ; out0             ;
+; |FangDou|Add6~0   ; |FangDou|Add6~0   ; out0             ;
+; |FangDou|Add6~1   ; |FangDou|Add6~1   ; out0             ;
+; |FangDou|Add6~2   ; |FangDou|Add6~2   ; out0             ;
+; |FangDou|Add6~3   ; |FangDou|Add6~3   ; out0             ;
+; |FangDou|Add6~4   ; |FangDou|Add6~4   ; out0             ;
+; |FangDou|Add7~0   ; |FangDou|Add7~0   ; out0             ;
+; |FangDou|Add7~1   ; |FangDou|Add7~1   ; out0             ;
+; |FangDou|Add7~2   ; |FangDou|Add7~2   ; out0             ;
+; |FangDou|Add7~3   ; |FangDou|Add7~3   ; out0             ;
+; |FangDou|Add7~4   ; |FangDou|Add7~4   ; out0             ;
+; |FangDou|Add8~0   ; |FangDou|Add8~0   ; out0             ;
+; |FangDou|Add8~1   ; |FangDou|Add8~1   ; out0             ;
+; |FangDou|Add8~2   ; |FangDou|Add8~2   ; out0             ;
+; |FangDou|Add8~3   ; |FangDou|Add8~3   ; out0             ;
+; |FangDou|Add8~4   ; |FangDou|Add8~4   ; out0             ;
+; |FangDou|Equal0~0 ; |FangDou|Equal0~0 ; out0             ;
+; |FangDou|Equal1~0 ; |FangDou|Equal1~0 ; out0             ;
+; |FangDou|Equal2~0 ; |FangDou|Equal2~0 ; out0             ;
+; |FangDou|Equal3~0 ; |FangDou|Equal3~0 ; out0             ;
+; |FangDou|Equal5~0 ; |FangDou|Equal5~0 ; out0             ;
+; |FangDou|Equal6~0 ; |FangDou|Equal6~0 ; out0             ;
+; |FangDou|Equal7~0 ; |FangDou|Equal7~0 ; out0             ;
+; |FangDou|Equal8~0 ; |FangDou|Equal8~0 ; out0             ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------+
+; Missing 0-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |FangDou|P1~0      ; |FangDou|P1~0      ; out0             ;
+; |FangDou|TEMP1~0   ; |FangDou|TEMP1~0   ; out              ;
+; |FangDou|TEMP1~1   ; |FangDou|TEMP1~1   ; out              ;
+; |FangDou|TEMP1~2   ; |FangDou|TEMP1~2   ; out              ;
+; |FangDou|TEMP1~3   ; |FangDou|TEMP1~3   ; out              ;
+; |FangDou|DATA8     ; |FangDou|DATA8     ; regout           ;
+; |FangDou|TEMP1~4   ; |FangDou|TEMP1~4   ; out              ;
+; |FangDou|TEMP1~5   ; |FangDou|TEMP1~5   ; out              ;
+; |FangDou|TEMP1~6   ; |FangDou|TEMP1~6   ; out              ;
+; |FangDou|TEMP1~7   ; |FangDou|TEMP1~7   ; out              ;
+; |FangDou|P2~0      ; |FangDou|P2~0      ; out0             ;
+; |FangDou|TEMP2~0   ; |FangDou|TEMP2~0   ; out              ;
+; |FangDou|TEMP2~1   ; |FangDou|TEMP2~1   ; out              ;
+; |FangDou|TEMP2~2   ; |FangDou|TEMP2~2   ; out              ;
+; |FangDou|TEMP2~3   ; |FangDou|TEMP2~3   ; out              ;
+; |FangDou|TEMP2~4   ; |FangDou|TEMP2~4   ; out              ;
+; |FangDou|TEMP2~5   ; |FangDou|TEMP2~5   ; out              ;
+; |FangDou|TEMP2~6   ; |FangDou|TEMP2~6   ; out              ;
+; |FangDou|TEMP2~7   ; |FangDou|TEMP2~7   ; out              ;
+; |FangDou|DATA1     ; |FangDou|DATA1     ; regout           ;
+; |FangDou|P3~0      ; |FangDou|P3~0      ; out0             ;
+; |FangDou|TEMP3~0   ; |FangDou|TEMP3~0   ; out              ;
+; |FangDou|TEMP3~1   ; |FangDou|TEMP3~1   ; out              ;
+; |FangDou|TEMP3~2   ; |FangDou|TEMP3~2   ; out              ;
+; |FangDou|TEMP3~3   ; |FangDou|TEMP3~3   ; out              ;
+; |FangDou|TEMP9[3]  ; |FangDou|TEMP9[3]  ; regout           ;
+; |FangDou|TEMP9[2]  ; |FangDou|TEMP9[2]  ; regout           ;
+; |FangDou|TEMP3~4   ; |FangDou|TEMP3~4   ; out              ;
+; |FangDou|TEMP3~5   ; |FangDou|TEMP3~5   ; out              ;
+; |FangDou|TEMP3~6   ; |FangDou|TEMP3~6   ; out              ;
+; |FangDou|TEMP3~7   ; |FangDou|TEMP3~7   ; out              ;
+; |FangDou|SW~reg0   ; |FangDou|SW~reg0   ; regout           ;
+; |FangDou|P4~0      ; |FangDou|P4~0      ; out0             ;
+; |FangDou|TEMP4~0   ; |FangDou|TEMP4~0   ; out              ;
+; |FangDou|TEMP4~1   ; |FangDou|TEMP4~1   ; out              ;
+; |FangDou|TEMP4~2   ; |FangDou|TEMP4~2   ; out              ;
+; |FangDou|TEMP4~3   ; |FangDou|TEMP4~3   ; out              ;
+; |FangDou|TEMP9[1]  ; |FangDou|TEMP9[1]  ; regout           ;
+; |FangDou|TEMP9[0]  ; |FangDou|TEMP9[0]  ; regout           ;
+; |FangDou|TEMP4~4   ; |FangDou|TEMP4~4   ; out              ;
+; |FangDou|TEMP4~5   ; |FangDou|TEMP4~5   ; out              ;
+; |FangDou|TEMP4~6   ; |FangDou|TEMP4~6   ; out              ;
+; |FangDou|TEMP4~7   ; |FangDou|TEMP4~7   ; out              ;
+; |FangDou|YY~reg0   ; |FangDou|YY~reg0   ; regout           ;
+; |FangDou|UP~reg0   ; |FangDou|UP~reg0   ; regout           ;
+; |FangDou|P6~0      ; |FangDou|P6~0      ; out0             ;
+; |FangDou|TEMP6~0   ; |FangDou|TEMP6~0   ; out              ;
+; |FangDou|TEMP6~1   ; |FangDou|TEMP6~1   ; out              ;
+; |FangDou|TEMP6~2   ; |FangDou|TEMP6~2   ; out              ;
+; |FangDou|TEMP6~3   ; |FangDou|TEMP6~3   ; out              ;
+; |FangDou|DATA9     ; |FangDou|DATA9     ; regout           ;
+; |FangDou|TEMP6~4   ; |FangDou|TEMP6~4   ; out              ;
+; |FangDou|TEMP6~5   ; |FangDou|TEMP6~5   ; out              ;
+; |FangDou|TEMP6~6   ; |FangDou|TEMP6~6   ; out              ;
+; |FangDou|TEMP6~7   ; |FangDou|TEMP6~7   ; out              ;
+; |FangDou|DOWN~reg0 ; |FangDou|DOWN~reg0 ; regout           ;
+; |FangDou|P7~0      ; |FangDou|P7~0      ; out0             ;
+; |FangDou|TEMP7~0   ; |FangDou|TEMP7~0   ; out              ;
+; |FangDou|TEMP7~1   ; |FangDou|TEMP7~1   ; out              ;
+; |FangDou|TEMP7~2   ; |FangDou|TEMP7~2   ; out              ;
+; |FangDou|TEMP7~3   ; |FangDou|TEMP7~3   ; out              ;
+; |FangDou|TEMP7~4   ; |FangDou|TEMP7~4   ; out              ;
+; |FangDou|TEMP7~5   ; |FangDou|TEMP7~5   ; out              ;
+; |FangDou|TEMP7~6   ; |FangDou|TEMP7~6   ; out              ;
+; |FangDou|TEMP7~7   ; |FangDou|TEMP7~7   ; out              ;
+; |FangDou|MS~reg0   ; |FangDou|MS~reg0   ; regout           ;
+; |FangDou|P8~0      ; |FangDou|P8~0      ; out0             ;
+; |FangDou|TEMP8~0   ; |FangDou|TEMP8~0   ; out              ;
+; |FangDou|TEMP8~1   ; |FangDou|TEMP8~1   ; out              ;
+; |FangDou|TEMP8~2   ; |FangDou|TEMP8~2   ; out              ;
+; |FangDou|TEMP8~3   ; |FangDou|TEMP8~3   ; out              ;
+; |FangDou|RST~reg0  ; |FangDou|RST~reg0  ; regout           ;
+; |FangDou|TEMP8~4   ; |FangDou|TEMP8~4   ; out              ;
+; |FangDou|TEMP8~5   ; |FangDou|TEMP8~5   ; out              ;
+; |FangDou|TEMP8~6   ; |FangDou|TEMP8~6   ; out              ;
+; |FangDou|TEMP8~7   ; |FangDou|TEMP8~7   ; out              ;
+; |FangDou|DY~reg0   ; |FangDou|DY~reg0   ; regout           ;
+; |FangDou|P9~0      ; |FangDou|P9~0      ; out0             ;
+; |FangDou|TEMP9~0   ; |FangDou|TEMP9~0   ; out              ;
+; |FangDou|TEMP9~1   ; |FangDou|TEMP9~1   ; out              ;
+; |FangDou|TEMP9~2   ; |FangDou|TEMP9~2   ; out              ;
+; |FangDou|TEMP9~3   ; |FangDou|TEMP9~3   ; out              ;
+; |FangDou|TEMP9~4   ; |FangDou|TEMP9~4   ; out              ;
+; |FangDou|TEMP9~5   ; |FangDou|TEMP9~5   ; out              ;
+; |FangDou|TEMP9~6   ; |FangDou|TEMP9~6   ; out              ;
+; |FangDou|TEMP9~7   ; |FangDou|TEMP9~7   ; out              ;
+; |FangDou|QT~reg0   ; |FangDou|QT~reg0   ; regout           ;
+; |FangDou|TEMP8[0]  ; |FangDou|TEMP8[0]  ; regout           ;
+; |FangDou|TEMP8[1]  ; |FangDou|TEMP8[1]  ; regout           ;
+; |FangDou|TEMP8[2]  ; |FangDou|TEMP8[2]  ; regout           ;
+; |FangDou|TEMP8[3]  ; |FangDou|TEMP8[3]  ; regout           ;
+; |FangDou|DATA7     ; |FangDou|DATA7     ; regout           ;
+; |FangDou|TEMP7[0]  ; |FangDou|TEMP7[0]  ; regout           ;
+; |FangDou|TEMP7[1]  ; |FangDou|TEMP7[1]  ; regout           ;
+; |FangDou|TEMP7[2]  ; |FangDou|TEMP7[2]  ; regout           ;
+; |FangDou|TEMP7[3]  ; |FangDou|TEMP7[3]  ; regout           ;
+; |FangDou|DATA6     ; |FangDou|DATA6     ; regout           ;
+; |FangDou|TEMP6[0]  ; |FangDou|TEMP6[0]  ; regout           ;
+; |FangDou|TEMP6[1]  ; |FangDou|TEMP6[1]  ; regout           ;
+; |FangDou|TEMP6[2]  ; |FangDou|TEMP6[2]  ; regout           ;
+; |FangDou|TEMP6[3]  ; |FangDou|TEMP6[3]  ; regout           ;
+; |FangDou|DATA4     ; |FangDou|DATA4     ; regout           ;
+; |FangDou|TEMP4[0]  ; |FangDou|TEMP4[0]  ; regout           ;
+; |FangDou|TEMP4[1]  ; |FangDou|TEMP4[1]  ; regout           ;
+; |FangDou|TEMP4[2]  ; |FangDou|TEMP4[2]  ; regout           ;
+; |FangDou|TEMP4[3]  ; |FangDou|TEMP4[3]  ; regout           ;
+; |FangDou|DATA3     ; |FangDou|DATA3     ; regout           ;
+; |FangDou|TEMP3[0]  ; |FangDou|TEMP3[0]  ; regout           ;
+; |FangDou|TEMP3[1]  ; |FangDou|TEMP3[1]  ; regout           ;
+; |FangDou|TEMP3[2]  ; |FangDou|TEMP3[2]  ; regout           ;
+; |FangDou|TEMP3[3]  ; |FangDou|TEMP3[3]  ; regout           ;
+; |FangDou|DATA2     ; |FangDou|DATA2     ; regout           ;
+; |FangDou|TEMP2[0]  ; |FangDou|TEMP2[0]  ; regout           ;
+; |FangDou|TEMP2[1]  ; |FangDou|TEMP2[1]  ; regout           ;
+; |FangDou|TEMP2[2]  ; |FangDou|TEMP2[2]  ; regout           ;
+; |FangDou|TEMP2[3]  ; |FangDou|TEMP2[3]  ; regout           ;
+; |FangDou|GC~reg0   ; |FangDou|GC~reg0   ; regout           ;
+; |FangDou|TEMP1[0]  ; |FangDou|TEMP1[0]  ; regout           ;
+; |FangDou|TEMP1[1]  ; |FangDou|TEMP1[1]  ; regout           ;
+; |FangDou|TEMP1[2]  ; |FangDou|TEMP1[2]  ; regout           ;
+; |FangDou|TEMP1[3]  ; |FangDou|TEMP1[3]  ; regout           ;
+; |FangDou|GC_IN     ; |FangDou|GC_IN     ; out              ;
+; |FangDou|SW_IN     ; |FangDou|SW_IN     ; out              ;
+; |FangDou|YY_IN     ; |FangDou|YY_IN     ; out              ;
+; |FangDou|UP_IN     ; |FangDou|UP_IN     ; out              ;
+; |FangDou|MS_IN     ; |FangDou|MS_IN     ; out              ;
+; |FangDou|DY_IN     ; |FangDou|DY_IN     ; out              ;
+; |FangDou|QT_IN     ; |FangDou|QT_IN     ; out              ;
+; |FangDou|RST_IN    ; |FangDou|RST_IN    ; out              ;
+; |FangDou|GC        ; |FangDou|GC        ; pin_out          ;
+; |FangDou|SW        ; |FangDou|SW        ; pin_out          ;
+; |FangDou|YY        ; |FangDou|YY        ; pin_out          ;
+; |FangDou|UP        ; |FangDou|UP        ; pin_out          ;
+; |FangDou|DOWN      ; |FangDou|DOWN      ; pin_out          ;
+; |FangDou|MS        ; |FangDou|MS        ; pin_out          ;
+; |FangDou|DY        ; |FangDou|DY        ; pin_out          ;
+; |FangDou|QT        ; |FangDou|QT        ; pin_out          ;
+; |FangDou|RST       ; |FangDou|RST       ; pin_out          ;
+; |FangDou|Add0~0    ; |FangDou|Add0~0    ; out0             ;
+; |FangDou|Add0~1    ; |FangDou|Add0~1    ; out0             ;
+; |FangDou|Add0~2    ; |FangDou|Add0~2    ; out0             ;
+; |FangDou|Add0~3    ; |FangDou|Add0~3    ; out0             ;
+; |FangDou|Add0~4    ; |FangDou|Add0~4    ; out0             ;
+; |FangDou|Add1~0    ; |FangDou|Add1~0    ; out0             ;
+; |FangDou|Add1~1    ; |FangDou|Add1~1    ; out0             ;
+; |FangDou|Add1~2    ; |FangDou|Add1~2    ; out0             ;
+; |FangDou|Add1~3    ; |FangDou|Add1~3    ; out0             ;
+; |FangDou|Add1~4    ; |FangDou|Add1~4    ; out0             ;
+; |FangDou|Add2~0    ; |FangDou|Add2~0    ; out0             ;
+; |FangDou|Add2~1    ; |FangDou|Add2~1    ; out0             ;
+; |FangDou|Add2~2    ; |FangDou|Add2~2    ; out0             ;
+; |FangDou|Add2~3    ; |FangDou|Add2~3    ; out0             ;
+; |FangDou|Add2~4    ; |FangDou|Add2~4    ; out0             ;
+; |FangDou|Add3~0    ; |FangDou|Add3~0    ; out0             ;
+; |FangDou|Add3~1    ; |FangDou|Add3~1    ; out0             ;
+; |FangDou|Add3~2    ; |FangDou|Add3~2    ; out0             ;
+; |FangDou|Add3~3    ; |FangDou|Add3~3    ; out0             ;
+; |FangDou|Add3~4    ; |FangDou|Add3~4    ; out0             ;
+; |FangDou|Add5~0    ; |FangDou|Add5~0    ; out0             ;
+; |FangDou|Add5~1    ; |FangDou|Add5~1    ; out0             ;
+; |FangDou|Add5~2    ; |FangDou|Add5~2    ; out0             ;
+; |FangDou|Add5~3    ; |FangDou|Add5~3    ; out0             ;
+; |FangDou|Add5~4    ; |FangDou|Add5~4    ; out0             ;
+; |FangDou|Add6~0    ; |FangDou|Add6~0    ; out0             ;
+; |FangDou|Add6~1    ; |FangDou|Add6~1    ; out0             ;
+; |FangDou|Add6~2    ; |FangDou|Add6~2    ; out0             ;
+; |FangDou|Add6~3    ; |FangDou|Add6~3    ; out0             ;
+; |FangDou|Add6~4    ; |FangDou|Add6~4    ; out0             ;
+; |FangDou|Add7~0    ; |FangDou|Add7~0    ; out0             ;
+; |FangDou|Add7~1    ; |FangDou|Add7~1    ; out0             ;
+; |FangDou|Add7~2    ; |FangDou|Add7~2    ; out0             ;
+; |FangDou|Add7~3    ; |FangDou|Add7~3    ; out0             ;
+; |FangDou|Add7~4    ; |FangDou|Add7~4    ; out0             ;
+; |FangDou|Add8~0    ; |FangDou|Add8~0    ; out0             ;
+; |FangDou|Add8~1    ; |FangDou|Add8~1    ; out0             ;
+; |FangDou|Add8~2    ; |FangDou|Add8~2    ; out0             ;
+; |FangDou|Add8~3    ; |FangDou|Add8~3    ; out0             ;
+; |FangDou|Add8~4    ; |FangDou|Add8~4    ; out0             ;
+; |FangDou|Equal0~0  ; |FangDou|Equal0~0  ; out0             ;
+; |FangDou|Equal1~0  ; |FangDou|Equal1~0  ; out0             ;
+; |FangDou|Equal2~0  ; |FangDou|Equal2~0  ; out0             ;
+; |FangDou|Equal3~0  ; |FangDou|Equal3~0  ; out0             ;
+; |FangDou|Equal5~0  ; |FangDou|Equal5~0  ; out0             ;
+; |FangDou|Equal6~0  ; |FangDou|Equal6~0  ; out0             ;
+; |FangDou|Equal7~0  ; |FangDou|Equal7~0  ; out0             ;
+; |FangDou|Equal8~0  ; |FangDou|Equal8~0  ; out0             ;
++--------------------+--------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Tue Jan 06 23:31:01 2015
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off FangDou -c FangDou
+Info: Using vector source file "I:/MyProject/FangDou/Waveform.vwf"
+Warning: Can't find signal in vector source file for input pin "|FangDou|GC_IN"
+Warning: Can't find signal in vector source file for input pin "|FangDou|SW_IN"
+Warning: Can't find signal in vector source file for input pin "|FangDou|YY_IN"
+Warning: Can't find signal in vector source file for input pin "|FangDou|UP_IN"
+Warning: Can't find signal in vector source file for input pin "|FangDou|MS_IN"
+Warning: Can't find signal in vector source file for input pin "|FangDou|DY_IN"
+Warning: Can't find signal in vector source file for input pin "|FangDou|QT_IN"
+Warning: Can't find signal in vector source file for input pin "|FangDou|RST_IN"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|FangDou|DATA5"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|FangDou|TEMP5[0]"
+Warning: Found clock-sensitive change during active clock edge at time 10.0 ns on register "|FangDou|TEMP5[2]"
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      10.58 %
+Info: Number of transitions in simulation is 572
+Info: Quartus II Simulator was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 156 megabytes
+    Info: Processing ended: Tue Jan 06 23:31:02 2015
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

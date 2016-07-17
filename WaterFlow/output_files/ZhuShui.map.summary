@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jan 07 09:13:24 2015
+Quartus II 64-Bit Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : ZhuShui
+Top-level Entity Name : ZHUSHUI
+Family : Cyclone II
+Total logic elements : 78
+    Total combinational functions : 78
+    Dedicated logic registers : 34
+Total registers : 34
+Total pins : 7
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
